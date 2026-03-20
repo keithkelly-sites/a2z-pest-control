@@ -31,6 +31,7 @@ const navLinks = [
   <meta property="og:url" content={Astro.url.href} />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="canonical" href={Astro.url.href} />
+  <link rel="icon" type="image/png" href="/favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -39,10 +40,11 @@ const navLinks = [
 </head>
 <body>
   <!-- Navigation -->
-  <header class="sticky top-0 z-50" style="background: oklch(0.42 0.16 256);">
+  <header class="sticky top-0 z-50 on-primary" style="background: #29303a;">
     <nav class="mx-auto flex items-center justify-between" style="max-width: var(--content-max-width); padding: 16px var(--padding-x-mobile);">
-      <a href="/" class="font-display text-lg font-bold text-white tracking-tight" style="font-family: var(--font-display);">
-        A2Z Pest Control
+      <a href="/" class="flex items-center gap-2 text-lg font-bold text-white tracking-tight" style="font-family: var(--font-display);">
+        <img src="/images/bug-mascot.png" alt="A2Z Pest Control" class="h-9 w-auto" />
+        <span>A2Z Pest Control</span>
       </a>
 
       <!-- Desktop nav -->
@@ -64,7 +66,7 @@ const navLinks = [
         <a
           href="tel:4128542224"
           class="inline-flex items-center gap-2 text-sm font-semibold px-5 py-2.5"
-          style="background: var(--color-accent); color: var(--color-foreground); border-radius: var(--radius-full); font-family: var(--font-body);"
+          style="background: var(--color-accent-bright); color: var(--color-foreground); border-radius: var(--radius-full); font-family: var(--font-body);"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
           Call 412-854-2224
@@ -79,7 +81,7 @@ const navLinks = [
     </nav>
 
     <!-- Mobile menu -->
-    <nav id="mobile-menu" class="hidden md:hidden" style="background: oklch(0.38 0.14 256);">
+    <nav id="mobile-menu" class="hidden md:hidden on-primary" style="background: #232a33;">
       <div class="flex flex-col px-6 py-4 gap-1">
         {navLinks.map(link => (
           <a
@@ -98,7 +100,7 @@ const navLinks = [
         <a
           href="tel:4128542224"
           class="mt-3 mb-1 inline-flex items-center justify-center gap-2 text-base font-semibold px-5 py-3"
-          style="background: var(--color-accent); color: var(--color-foreground); border-radius: var(--radius-full); font-family: var(--font-body);"
+          style="background: var(--color-accent-bright); color: var(--color-foreground); border-radius: var(--radius-full); font-family: var(--font-body);"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
           Call 412-854-2224
@@ -112,7 +114,7 @@ const navLinks = [
   </main>
 
   <!-- Footer -->
-  <footer style="background: var(--color-primary-dark); color: #ffffff;">
+  <footer class="on-primary" style="background: var(--color-primary-dark);">
     <div class="mx-auto grid gap-10 md:grid-cols-3 py-16" style="max-width: var(--content-max-width); padding-left: var(--padding-x-mobile); padding-right: var(--padding-x-mobile);">
       <div>
         <p class="text-lg font-bold tracking-tight mb-3" style="font-family: var(--font-display);">A2Z Pest Control LLC</p>
