@@ -1,14 +1,15 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: oklch(0.42 0.16 256);
+  --color-primary: #29303a;
   --color-primary-foreground: #ffffff;
   --color-foreground: #1c1c1e;
   --color-background: #f8f7f5;
-  --color-muted: #eef2f7;
+  --color-muted: #eef0f2;
   --color-muted-foreground: #5a6472;
   --color-border: #dce3ec;
-  --color-accent: oklch(0.68 0.14 47);
+  --color-accent: #0f7b4c;
+  --color-accent-bright: #22be81;
 
   --font-display: "Syne", system-ui, sans-serif;
   --font-body: "Work Sans", system-ui, sans-serif;
@@ -23,7 +24,7 @@ html {
   --prose-max-width: 640px;
   --padding-x: 48px;
   --padding-x-mobile: 24px;
-  --color-primary-dark: oklch(0.28 0.10 256);
+  --color-primary-dark: #1e242c;
   scroll-behavior: smooth;
 }
 
@@ -67,9 +68,15 @@ h3 {
 }
 
 a {
-  color: var(--color-primary);
+  color: var(--color-accent);
   text-decoration: none;
 }
+
+/* White text for elements inside dark (primary-bg) sections */
+.on-primary,
+.on-primary h1, .on-primary h2, .on-primary h3,
+.on-primary p, .on-primary a, .on-primary li { color: #ffffff; }
+.on-primary a:hover { opacity: 0.85; }
 
 @media (prefers-reduced-motion: no-preference) {
   a {
