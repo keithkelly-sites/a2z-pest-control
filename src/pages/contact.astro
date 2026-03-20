@@ -1,0 +1,169 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Contact - A2Z Pest Control LLC" description="Call A2Z Pest Control at 412-854-2224 for a free phone estimate. Serving the Pittsburgh area Monday-Friday 8am-3pm.">
+
+  <!-- Page Header -->
+  <section class="relative overflow-hidden" style="background: oklch(0.42 0.16 256);">
+    <div class="absolute inset-0 opacity-[0.06]" style="background: repeating-linear-gradient(135deg, transparent 0 12px, oklch(0.52 0.16 256) 12px 13px);"></div>
+    <div class="relative mx-auto" style="max-width: var(--content-max-width); padding: 80px var(--padding-x-mobile);">
+      <h1 class="text-white mb-3">Contact A2Z Pest Control</h1>
+      <p class="text-white/70 text-lg" style="font-family: var(--font-body);">We answer phones Monday-Friday 8am to 3pm.</p>
+    </div>
+  </section>
+
+  <!-- Contact Options -->
+  <section style="background: var(--color-background);">
+    <div class="mx-auto grid md:grid-cols-2 gap-12" style="max-width: var(--content-max-width); padding: var(--section-padding-y) var(--padding-x-mobile);">
+
+      <!-- Left: Contact Info -->
+      <div>
+        <h2 class="mb-6">Get in Touch</h2>
+        <a href="tel:4128542224" class="inline-block text-3xl font-bold tracking-tight mb-2" style="color: var(--color-primary); font-family: var(--font-display);">412-854-2224</a>
+        <p class="text-sm mb-6" style="color: var(--color-muted-foreground); font-family: var(--font-body);">Monday-Friday 8am-3pm</p>
+
+        <a href="mailto:a2zpestcontrolllc@gmail.com" class="text-base font-medium mb-8 inline-block" style="color: var(--color-primary); font-family: var(--font-body);">a2zpestcontrolllc@gmail.com</a>
+
+        <p class="text-sm leading-relaxed mt-2 mb-8 max-w-md" style="color: var(--color-muted-foreground); font-family: var(--font-body);">For a faster response, call us directly. We offer free phone estimates and can usually answer your questions on the first call.</p>
+
+        <div class="flex items-center gap-3">
+          <img src="/images/credit_card_logos_10.gif" alt="Accepted payment methods" width="168" height="25" />
+          <p class="text-xs" style="color: var(--color-muted-foreground); font-family: var(--font-body);">We accept major credit cards</p>
+        </div>
+      </div>
+
+      <!-- Right: Contact Form -->
+      <div>
+        <form id="contact-form" class="space-y-5">
+          <div>
+            <label for="name" class="block text-sm font-medium mb-1.5" style="color: var(--color-foreground); font-family: var(--font-body);">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              class="w-full px-4 py-3 text-sm bg-white border outline-none"
+              style="border-color: var(--color-border); border-radius: var(--radius); font-family: var(--font-body); transition: border-color 0.15s ease;"
+            />
+          </div>
+          <div>
+            <label for="phone" class="block text-sm font-medium mb-1.5" style="color: var(--color-foreground); font-family: var(--font-body);">Phone</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              required
+              class="w-full px-4 py-3 text-sm bg-white border outline-none"
+              style="border-color: var(--color-border); border-radius: var(--radius); font-family: var(--font-body); transition: border-color 0.15s ease;"
+            />
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-medium mb-1.5" style="color: var(--color-foreground); font-family: var(--font-body);">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="w-full px-4 py-3 text-sm bg-white border outline-none"
+              style="border-color: var(--color-border); border-radius: var(--radius); font-family: var(--font-body); transition: border-color 0.15s ease;"
+            />
+          </div>
+          <div>
+            <label for="pest" class="block text-sm font-medium mb-1.5" style="color: var(--color-foreground); font-family: var(--font-body);">Pest or Issue</label>
+            <input
+              type="text"
+              id="pest"
+              name="pest"
+              placeholder="e.g., Ants in kitchen, mice in basement"
+              class="w-full px-4 py-3 text-sm bg-white border outline-none"
+              style="border-color: var(--color-border); border-radius: var(--radius); font-family: var(--font-body); transition: border-color 0.15s ease;"
+            />
+          </div>
+          <div>
+            <label for="message" class="block text-sm font-medium mb-1.5" style="color: var(--color-foreground); font-family: var(--font-body);">Message or Details</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              required
+              class="w-full px-4 py-3 text-sm bg-white border outline-none resize-y"
+              style="border-color: var(--color-border); border-radius: var(--radius); font-family: var(--font-body); transition: border-color 0.15s ease;"
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="inline-flex items-center justify-center px-8 py-3.5 text-sm font-semibold w-full sm:w-auto"
+            style="background: var(--color-primary); color: var(--color-primary-foreground); border-radius: var(--radius-full); font-family: var(--font-body);"
+          >
+            Send Message
+          </button>
+          <p class="text-xs mt-2" style="color: var(--color-muted-foreground); font-family: var(--font-body);">Or call us directly at <a href="tel:4128542224" style="color: var(--color-primary);">412-854-2224</a> for a free phone estimate.</p>
+        </form>
+
+        <div id="form-success" class="hidden p-8 text-center" style="background: var(--color-muted); border-radius: var(--radius);">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-primary); margin: 0 auto 16px;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+          <p class="text-lg font-semibold mb-2" style="font-family: var(--font-display);">Thanks for reaching out!</p>
+          <p class="text-sm" style="color: var(--color-muted-foreground); font-family: var(--font-body);">We'll get back to you soon. For a faster response, call us at <a href="tel:4128542224" style="color: var(--color-primary);">412-854-2224</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Area Reminder -->
+  <section style="background: var(--color-muted);">
+    <div class="mx-auto text-center" style="max-width: var(--content-max-width); padding: 48px var(--padding-x-mobile);">
+      <p class="text-sm max-w-xl mx-auto" style="color: var(--color-muted-foreground); font-family: var(--font-body);">We serve Allegheny, Butler, and Washington Counties in the Pittsburgh area. Not sure if you're covered? Call us and we'll confirm before you schedule anything.</p>
+    </div>
+  </section>
+
+  <!-- Google Maps -->
+  <section style="background: var(--color-background);">
+    <div class="mx-auto" style="max-width: var(--content-max-width); padding: var(--section-padding-y-mobile) var(--padding-x-mobile);">
+      <h3 class="mb-4 text-center">Our Service Area</h3>
+      <p class="text-sm text-center mb-6" style="color: var(--color-muted-foreground); font-family: var(--font-body);">Serving Allegheny, Butler, and Washington Counties in the Pittsburgh area</p>
+      <iframe
+        title="A2Z Pest Control LLC service area on Google Maps"
+        src="https://www.google.com/maps?q=Pittsburgh+PA+Allegheny+County&output=embed"
+        width="100%"
+        height="400"
+        style="border: 0; border-radius: 8px;"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </section>
+
+</Layout>
+
+<script>
+  const form = document.getElementById('contact-form') as HTMLFormElement | null;
+  const success = document.getElementById('form-success');
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const data = Object.fromEntries(new FormData(form));
+    try {
+      await fetch('https://api.keithkelly.dev/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...data, siteToken: '52faa681-03cd-4146-9b89-2ca256470cf5' }),
+      });
+    } catch {
+      // Show success regardless
+    }
+    form.classList.add('hidden');
+    success?.classList.remove('hidden');
+  });
+
+  // Focus styles for inputs
+  document.querySelectorAll('#contact-form input, #contact-form textarea').forEach(el => {
+    el.addEventListener('focus', () => {
+      (el as HTMLElement).style.borderColor = 'oklch(0.42 0.16 256)';
+      (el as HTMLElement).style.boxShadow = '0 0 0 3px oklch(0.42 0.16 256 / 0.1)';
+    });
+    el.addEventListener('blur', () => {
+      (el as HTMLElement).style.borderColor = 'var(--color-border)';
+      (el as HTMLElement).style.boxShadow = 'none';
+    });
+  });
+</script>
