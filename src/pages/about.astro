@@ -2,106 +2,367 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="About Us - A2Z Pest Control LLC" description="A2Z Pest Control LLC has been a family-owned pest control business in Pittsburgh since 1993, serving Allegheny, Butler, and Washington Counties.">
+<Layout title="About Us | A2Z Pest Control LLC" description="Family-owned and operated pest control in the Pittsburgh area since 1993. Serving Allegheny, Butler, and Washington Counties with dependable, discreet service.">
 
-  <!-- Page Header -->
-  <section class="relative overflow-hidden on-primary" style="background: #29303a;">
-    <div class="absolute inset-0 opacity-[0.06]" style="background: repeating-linear-gradient(135deg, transparent 0 12px, #3a4350 12px 13px);"></div>
-    <div class="relative mx-auto" style="max-width: var(--content-max-width); padding: 80px var(--padding-x-mobile);">
-      <h1 class="text-white mb-3">About A2Z Pest Control</h1>
-      <p class="text-white/70 text-lg" style="font-family: var(--font-body);">Locally owned and operated in Pittsburgh since 1993.</p>
+  <section class="page-hero">
+    <div class="container">
+      <h1 class="page-title">About Us</h1>
     </div>
   </section>
 
-  <!-- Our Story -->
-  <section style="background: var(--color-background);">
-    <div class="mx-auto grid md:grid-cols-2 gap-0" style="max-width: var(--content-max-width);">
-      <div class="aspect-[3/4] md:aspect-auto">
-        <img
-          src="/images/unadjustednonraw_thumb_a1e1.jpg"
-          alt="Our Family"
-          class="w-full h-full object-cover object-top"
-          loading="lazy"
-        />
-      </div>
-      <div class="flex flex-col justify-center" style="padding: var(--section-padding-y-mobile) var(--padding-x-mobile);">
-        <h2 class="mb-6">Treating Pittsburgh Homes Since 1993</h2>
-        <p class="leading-relaxed mb-4" style="color: var(--color-muted-foreground); font-family: var(--font-body);">A2Z Pest Control LLC is a local, family-owned business. Since 1993, we've treated thousands of homes in Allegheny, Butler, and Washington Counties.</p>
-        <p class="leading-relaxed mb-4" style="color: var(--color-muted-foreground); font-family: var(--font-body);">As parents and pet owners, we understand what's essential in choosing a pest control company. At A2Z Pest Control LLC, we treat your home like our own.</p>
-        <p class="leading-relaxed" style="color: var(--color-muted-foreground); font-family: var(--font-body);">Safety is our priority, letting you feel confident the work is done right.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Why Choose A2Z -->
-  <section style="background: var(--color-muted);">
-    <div class="mx-auto" style="max-width: var(--content-max-width); padding: var(--section-padding-y) var(--padding-x-mobile);">
-      <h2 class="text-center mb-12">What You Can Expect</h2>
-      <div class="grid md:grid-cols-2 gap-6">
-        <div class="border-l-2 pl-6 py-3" style="border-color: var(--color-accent-bright);">
-          <h3 class="mb-2 text-base font-semibold" style="font-family: var(--font-display);">30+ Years of Experience</h3>
-          <p class="text-sm" style="color: var(--color-muted-foreground); font-family: var(--font-body);">In business since 1993, serving thousands of Pittsburgh area homes.</p>
+  <section class="about-story section">
+    <div class="container">
+      <div class="story-layout">
+        <div class="story-image reveal">
+          <div class="story-frame">
+            <img src="/images/unadjustednonraw_thumb_a1e1.jpg" alt="The A2Z Pest Control family" width="1706" height="2274" loading="lazy" />
+          </div>
         </div>
-        <div class="border-l-2 pl-6 py-3" style="border-color: var(--color-accent-bright);">
-          <h3 class="mb-2 text-base font-semibold" style="font-family: var(--font-display);">Family-Owned</h3>
-          <p class="text-sm" style="color: var(--color-muted-foreground); font-family: var(--font-body);">We are parents and pet owners ourselves. We understand the stakes when it comes to pest control safety.</p>
-        </div>
-        <div class="border-l-2 pl-6 py-3" style="border-color: var(--color-accent-bright);">
-          <h3 class="mb-2 text-base font-semibold" style="font-family: var(--font-display);">Screened & Trained Employees</h3>
-          <p class="text-sm" style="color: var(--color-muted-foreground); font-family: var(--font-body);">Every technician is vetted before stepping into a customer's home.</p>
-        </div>
-        <div class="border-l-2 pl-6 py-3" style="border-color: var(--color-accent-bright);">
-          <h3 class="mb-2 text-base font-semibold" style="font-family: var(--font-display);">No Pressure Sales</h3>
-          <p class="text-sm" style="color: var(--color-muted-foreground); font-family: var(--font-body);">We give you the information, you make the call. No upsells, no scare tactics.</p>
-        </div>
-        <div class="border-l-2 pl-6 py-3" style="border-color: var(--color-accent-bright);">
-          <h3 class="mb-2 text-base font-semibold" style="font-family: var(--font-display);">On-Time Appointments</h3>
-          <p class="text-sm" style="color: var(--color-muted-foreground); font-family: var(--font-body);">Respecting your schedule is part of the job.</p>
-        </div>
-        <div class="border-l-2 pl-6 py-3" style="border-color: var(--color-accent-bright);">
-          <h3 class="mb-2 text-base font-semibold" style="font-family: var(--font-display);">Unmarked Vehicles</h3>
-          <p class="text-sm" style="color: var(--color-muted-foreground); font-family: var(--font-body);">Discreet service for customers who prefer privacy.</p>
-        </div>
-        <div class="border-l-2 pl-6 py-3" style="border-color: var(--color-accent-bright);">
-          <h3 class="mb-2 text-base font-semibold" style="font-family: var(--font-display);">Free Phone Estimates</h3>
-          <p class="text-sm" style="color: var(--color-muted-foreground); font-family: var(--font-body);">Call and we'll tell you what we can do before you commit to anything.</p>
-        </div>
-        <div class="border-l-2 pl-6 py-3" style="border-color: var(--color-accent-bright);">
-          <h3 class="mb-2 text-base font-semibold" style="font-family: var(--font-display);">Budget-Friendly</h3>
-          <p class="text-sm" style="color: var(--color-muted-foreground); font-family: var(--font-body);">Competitive pricing for Pittsburgh area homeowners.</p>
+        <div class="story-text reveal">
+          <div class="story-year">
+            <span class="year-number">1993</span>
+            <span class="year-dash"></span>
+            <span class="year-label">Present</span>
+          </div>
+          <h2>Family-owned. Pittsburgh-rooted.<br />Still at it after 30 years.</h2>
+          <p>A2Z Pest Control LLC is a local, family-owned business. Since 1993, we've treated thousands of homes in Allegheny, Butler, and Washington Counties.</p>
+          <p>As parents and pet owners, we understand what's essential in choosing a pest control company. At A2Z Pest Control, we treat your home like our own. Safety is our priority, letting you feel confident the work is done right.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Hours & Service Area -->
-  <section style="background: var(--color-background);">
-    <div class="mx-auto grid md:grid-cols-2 gap-10" style="max-width: var(--content-max-width); padding: var(--section-padding-y) var(--padding-x-mobile);">
-      <div>
-        <h3 class="mb-4">Business Hours</h3>
-        <p class="text-sm leading-relaxed mb-2" style="color: var(--color-muted-foreground); font-family: var(--font-body);">Phones answered Monday-Friday 8am-3pm</p>
-        <p class="text-sm" style="color: var(--color-muted-foreground); font-family: var(--font-body);">Closed Saturday and Sunday</p>
+  <section class="values-section section">
+    <div class="container">
+      <h2 class="values-heading reveal">What Sets Us Apart</h2>
+      <div class="values-grid">
+        <div class="value-card reveal">
+          <div class="value-number">01</div>
+          <h3>Unmarked Vehicles</h3>
+          <p>We pull up in plain vehicles. Your pest problem is your business, not your neighborhood's.</p>
+        </div>
+        <div class="value-card reveal">
+          <div class="value-number">02</div>
+          <h3>30+ Years</h3>
+          <p>We've seen every pest problem Pittsburgh can throw at a home. There's no guesswork left for us.</p>
+        </div>
+        <div class="value-card reveal">
+          <div class="value-number">03</div>
+          <h3>No Pressure</h3>
+          <p>We'll tell you what the problem is and what it costs. No scare tactics, no upselling treatments you don't need.</p>
+        </div>
+        <div class="value-card reveal">
+          <div class="value-number">04</div>
+          <h3>On Time</h3>
+          <p>When we say we'll be there, we're there. You have enough going on without rearranging your day for us.</p>
+        </div>
+        <div class="value-card reveal">
+          <div class="value-number">05</div>
+          <h3>Screened Staff</h3>
+          <p>Background-checked, trained technicians who understand your home has kids and pets in it.</p>
+        </div>
+        <div class="value-card reveal">
+          <div class="value-number">06</div>
+          <h3>Free Estimates</h3>
+          <p>Call, describe the issue, get a price. Most jobs don't need a site visit before we can quote.</p>
+        </div>
       </div>
-      <div>
-        <h3 class="mb-4">Service Area</h3>
-        <ul class="space-y-2">
-          <li class="text-sm" style="color: var(--color-muted-foreground); font-family: var(--font-body);">Allegheny County</li>
-          <li class="text-sm" style="color: var(--color-muted-foreground); font-family: var(--font-body);">Butler County</li>
-          <li class="text-sm" style="color: var(--color-muted-foreground); font-family: var(--font-body);">Washington County</li>
+    </div>
+  </section>
+
+  <section class="area-section section">
+    <div class="container">
+      <div class="area-layout reveal">
+        <div class="area-text">
+          <h2>Service Area</h2>
+          <p>We serve residential properties across three counties in the greater Pittsburgh region.</p>
+        </div>
+        <ul class="area-list">
+          <li class="area-item">
+            <span class="area-county">Allegheny County</span>
+          </li>
+          <li class="area-item">
+            <span class="area-county">Butler County</span>
+          </li>
+          <li class="area-item">
+            <span class="area-county">Washington County</span>
+          </li>
         </ul>
-        <p class="text-sm mt-4" style="color: var(--color-muted-foreground); font-family: var(--font-body);">Not sure if you're in our coverage area? Give us a call.</p>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="relative overflow-hidden on-primary" style="background: #29303a;">
-    <div class="mx-auto text-center" style="max-width: var(--content-max-width); padding: var(--section-padding-y) var(--padding-x-mobile);">
-      <div class="w-12 h-[3px] mx-auto mb-8" style="background: var(--color-accent-bright);"></div>
-      <h2 class="text-white mb-6">Call Us Today</h2>
-      <a href="tel:4128542224" class="inline-block text-4xl md:text-5xl font-bold tracking-tight text-white mb-3" style="font-family: var(--font-display);">412-854-2224</a>
-      <p class="text-sm text-white/50" style="font-family: var(--font-body);">Phones answered Monday-Friday 8am-3pm</p>
+  <section class="about-cta section">
+    <div class="container">
+      <div class="cta-block reveal">
+        <h2>Ready to talk?</h2>
+        <p>Give us a call during business hours. We pick up the phone and give you a straight answer.</p>
+        <a href="tel:412-854-2224" class="btn btn-primary btn-lg">Call 412-854-2224</a>
+        <p class="cta-hours">Monday through Friday, 8am to 3pm</p>
+      </div>
     </div>
   </section>
 
 </Layout>
+
+<style>
+  .page-hero {
+    padding-top: calc(80px + var(--space-xl));
+    padding-bottom: var(--space-lg);
+    background:
+      linear-gradient(180deg, oklch(0.12 0.02 155 / 0.3) 0%, var(--black) 100%);
+  }
+
+  .page-title {
+    font-size: clamp(3rem, 7vw, 7rem);
+  }
+
+  /* ============ STORY ============ */
+  .story-layout {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    gap: var(--space-xl);
+    align-items: center;
+  }
+
+  .story-frame {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: 0 20px 60px oklch(0 0 0 / 0.5);
+    border: 1px solid var(--border);
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      aspect-ratio: 3/4;
+    }
+  }
+
+  .story-year {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-md);
+  }
+
+  .year-number {
+    font-family: var(--font-display);
+    font-size: 3.5rem;
+    color: var(--green);
+    line-height: 1;
+    letter-spacing: 0.05em;
+  }
+
+  .year-dash {
+    width: 40px;
+    height: 2px;
+    background: var(--green-dim);
+  }
+
+  .year-label {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  .story-text {
+    h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.05;
+      margin-bottom: var(--space-md);
+    }
+
+    p {
+      color: var(--text-dim);
+      font-size: 1.05rem;
+      line-height: 1.8;
+      margin-bottom: var(--space-sm);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .story-layout {
+      grid-template-columns: 1fr;
+    }
+
+    .story-frame {
+      max-width: 400px;
+      margin-inline: auto;
+    }
+  }
+
+  /* ============ VALUES ============ */
+  .values-section {
+    background: var(--dark);
+    border-block: 1px solid var(--border);
+  }
+
+  .values-heading {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    margin-bottom: var(--space-xl);
+  }
+
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+  }
+
+  .value-card {
+    background: var(--black);
+    padding: var(--space-lg) var(--space-md);
+    border-radius: var(--radius);
+    transition: background 0.3s;
+    position: relative;
+
+    &:hover {
+      background: oklch(0.1 0.02 155);
+
+      .value-number {
+        color: var(--green);
+      }
+    }
+  }
+
+  .value-number {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    color: var(--text-faint);
+    line-height: 1;
+    margin-bottom: var(--space-sm);
+    transition: color 0.3s;
+  }
+
+  .value-card {
+    h3 {
+      font-size: 1.1rem;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.4rem;
+    }
+
+    p {
+      color: var(--text-dim);
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .values-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .values-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* ============ SERVICE AREA ============ */
+  .area-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+    align-items: center;
+  }
+
+  .area-text h2 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    margin-bottom: var(--space-sm);
+  }
+
+  .area-text p {
+    color: var(--text-dim);
+    font-size: 1.05rem;
+  }
+
+  .area-list {
+    display: grid;
+    gap: var(--space-sm);
+  }
+
+  .area-item {
+    padding: var(--space-md);
+    background: var(--dark);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    transition: border-color 0.3s, background 0.3s;
+
+    &:hover {
+      border-color: var(--green-dim);
+      background: var(--green-glass);
+    }
+  }
+
+  .area-county {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 768px) {
+    .area-layout {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* ============ CTA ============ */
+  .about-cta {
+    text-align: center;
+    background:
+      radial-gradient(ellipse at 50% 50%, oklch(0.15 0.04 155 / 0.3), transparent 60%),
+      var(--black);
+  }
+
+  .cta-block {
+    h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      text-transform: uppercase;
+      margin-bottom: var(--space-sm);
+    }
+
+    p {
+      color: var(--text-dim);
+      font-size: 1.1rem;
+      margin-bottom: var(--space-md);
+    }
+  }
+
+  .cta-hours {
+    margin-top: var(--space-sm);
+    font-size: 0.8rem !important;
+    color: var(--text-faint) !important;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.75rem 1.75rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    border-radius: var(--radius);
+    transition: all 0.25s ease;
+  }
+
+  .btn-primary {
+    background: var(--green);
+    color: var(--black);
+
+    &:hover {
+      background: var(--green-bright);
+      box-shadow: 0 0 30px oklch(0.72 0.19 155 / 0.3);
+    }
+  }
+
+  .btn-lg {
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+  }
+</style>

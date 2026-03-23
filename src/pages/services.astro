@@ -2,229 +2,465 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Pest Control Services - A2Z Pest Control LLC" description="A2Z Pest Control handles ants, rodents, roaches, centipedes, stinging insects, moths, fleas, silverfish, earwigs, and carpenter bees in the Pittsburgh area.">
+<Layout title="Pest Control Services | A2Z Pest Control LLC" description="Complete pest control services for Pittsburgh homes. Ants, rodents, roaches, stinging insects, centipedes, fleas, moths, silverfish, earwigs, and more.">
 
-  <!-- Page Header -->
-  <section class="relative overflow-hidden on-primary" style="background: #29303a;">
-    <div class="absolute inset-0 opacity-[0.06]" style="background: repeating-linear-gradient(135deg, transparent 0 12px, #3a4350 12px 13px);"></div>
-    <div class="relative mx-auto" style="max-width: var(--content-max-width); padding: 80px var(--padding-x-mobile);">
-      <h1 class="text-white mb-3">Pest Control Services</h1>
-      <p class="text-white/70 text-lg" style="font-family: var(--font-body);">Serving Allegheny, Butler, and Washington Counties since 1993.</p>
+  <section class="page-hero">
+    <div class="container">
+      <h1 class="page-title">Our Services</h1>
+      <p class="page-intro">A2Z Pest Control handles residential pest problems across Allegheny, Butler, and Washington Counties. Here's what we treat, how to identify each pest, and what to expect.</p>
     </div>
   </section>
 
-  <!-- Service Area Intro -->
-  <section style="background: var(--color-background);">
-    <div class="mx-auto" style="max-width: var(--content-max-width); padding: var(--section-padding-y) var(--padding-x-mobile) 40px;">
-      <p class="text-base max-w-2xl leading-relaxed" style="color: var(--color-muted-foreground); font-family: var(--font-body);">Following are some of the pest control services that A2Z Pest Control LLC offers in and around the Pittsburgh area including Allegheny, Butler, and Washington Counties.</p>
-      <div class="mt-6 p-5 border-l-[3px]" style="border-color: var(--color-accent-bright); background: #f0f8f4; border-radius: 0 var(--radius) var(--radius) 0;">
-        <p class="text-sm font-medium" style="color: var(--color-foreground); font-family: var(--font-body);">Important: Do not seal any holes until the nest has been professionally treated.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Termite Notice -->
-  <section style="background: var(--color-muted);">
-    <div class="mx-auto" style="max-width: var(--content-max-width); padding: 32px var(--padding-x-mobile);">
-      <div class="border-t-2 pt-5" style="border-color: var(--color-accent-bright);">
-        <p class="text-sm font-medium" style="color: var(--color-foreground); font-family: var(--font-body);">We are not currently taking on new termite work this year.</p>
-        <p class="text-sm mt-1" style="color: var(--color-muted-foreground); font-family: var(--font-body);">For existing termite concerns, please call and we can advise next steps.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Service: Ants -->
-  <section style="background: var(--color-background);">
-    <div class="mx-auto" style="max-width: var(--content-max-width); padding: var(--section-padding-y) var(--padding-x-mobile);">
-      <div class="grid md:grid-cols-2 gap-10 items-start">
-        <div>
-          <h2 class="mb-6">Ants</h2>
-          <h3 class="mb-3">Carpenter Ant</h3>
-          <p class="text-sm leading-relaxed mb-4" style="color: var(--color-muted-foreground); font-family: var(--font-body);">Among the largest ants, from one-fourth to three-eighths inch long. Most common species is black, but some have reddish or yellowish coloration. Workers have large mandibles.</p>
-          <p class="text-sm leading-relaxed mb-4" style="color: var(--color-muted-foreground); font-family: var(--font-body);">Normally nest in dead portions of standing trees, stumps or logs, or burrow under fallen logs or stones. They invade homes in search of food, and nests inside homes can do great damage. They hollow out "galleries" in wood that are so smooth they appear to be sandpapered.</p>
-          <p class="text-sm leading-relaxed mb-4" style="color: var(--color-muted-foreground); font-family: var(--font-body);">Carpenter ants do not eat wood. They'll feed on nearly anything people eat, particularly sweets and meats, and also feed on other insects. All kinds of houses, regardless of age or type of construction, are vulnerable to infestation and damage. Colonies can contain up to 3,000 workers.</p>
-          <p class="text-sm leading-relaxed mb-6" style="color: var(--color-muted-foreground); font-family: var(--font-body);">Swarms of winged carpenter ant reproductives emerging inside a home are a sure sign that a colony is nesting somewhere inside the structure.</p>
-
-          <h3 class="mb-3">Odorous House Ant</h3>
-          <p class="text-sm leading-relaxed mb-4" style="color: var(--color-muted-foreground); font-family: var(--font-body);">Dark reddish brown to black, about one-tenth inch long. Nests found in a great variety of situations. In the home, often found nesting in the walls or beneath the floor. Most likely to invade homes during rainy weather. When crushed, they give off a very unpleasant odor.</p>
-
-          <h3 class="mb-3">Pavement Ant</h3>
-          <p class="text-sm leading-relaxed" style="color: var(--color-muted-foreground); font-family: var(--font-body);">Light brown to black, about one-tenth inch long. Nests are outdoors under stones, along curbing or in cracks of pavement. Can nest indoors in walls and under floors. Omnivorous, but prefer greasy and sweet foods. A particular nuisance around homes with slab-on-grade construction.</p>
-        </div>
-        <div class="flex flex-col gap-4">
-          <img src="/images/shutterstock_73929577_-_version_2.jpg" alt="Carpenter ant" class="w-full object-cover" style="border-radius: var(--radius); aspect-ratio: 16/10;" loading="lazy" />
-          <img src="/images/shutterstock_212656306.jpg" alt="Odorous house ant" class="w-full object-cover" style="border-radius: var(--radius); aspect-ratio: 16/10;" loading="lazy" />
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Service: Rodents -->
-  <section style="background: var(--color-muted);">
-    <div class="mx-auto" style="max-width: var(--content-max-width); padding: var(--section-padding-y) var(--padding-x-mobile);">
-      <div class="grid md:grid-cols-2 gap-10 items-start">
-        <div class="order-2 md:order-1 flex flex-col gap-4">
-          <img src="/images/shutterstock_127797452-2.jpg" alt="Deer mouse" class="w-full object-cover" style="border-radius: var(--radius); aspect-ratio: 16/10;" loading="lazy" />
-          <img src="/images/shutterstock_68499202.jpg" alt="Norway rat" class="w-full object-cover" style="border-radius: var(--radius); aspect-ratio: 16/10;" loading="lazy" />
-        </div>
-        <div class="order-1 md:order-2">
-          <h2 class="mb-6">Rodents</h2>
-          <h3 class="mb-3">House Mouse</h3>
-          <p class="text-sm leading-relaxed mb-4" style="color: var(--color-muted-foreground); font-family: var(--font-body);">Small and slender, three to four inches long, with large ears, small eyes and pointed nose. Light brown or light gray. They nest within structures and burrow, establishing a "territory" near food sources, generally 10 to 30 feet from the nest. Inquisitive, but very wary. Excellent climbers.</p>
-          <p class="text-sm leading-relaxed mb-6" style="color: var(--color-muted-foreground); font-family: var(--font-body);">Prolific breeders at two months. Can have litters as often as every 40 or 50 days, with four to seven young per litter. They feed 15 to 20 times per day, can squeeze through a hole one-fourth inch wide, and carry many serious diseases.</p>
-
-          <h3 class="mb-3">Deer Mouse</h3>
-          <p class="text-sm leading-relaxed mb-6" style="color: var(--color-muted-foreground); font-family: var(--font-body);">Bicolored, with a pale underbelly and brown or gray upper body. Deer mice prefer wooded areas and fields but will enter homes, especially as temperatures drop. Known to carry hantavirus, making professional removal essential.</p>
-
-          <h3 class="mb-3">Norway Rat</h3>
-          <p class="text-sm leading-relaxed" style="color: var(--color-muted-foreground); font-family: var(--font-body);">Larger and more aggressive than mice. Brownish-gray, heavy-bodied, with a blunt nose and small ears. They burrow along foundations, under debris, and in basements. Nocturnal feeders that consume nearly anything. Rapid breeders that can cause significant structural damage.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Service: Roaches & Boxelder Bugs -->
-  <section style="background: var(--color-background);">
-    <div class="mx-auto" style="max-width: var(--content-max-width); padding: var(--section-padding-y) var(--padding-x-mobile);">
-      <div class="grid md:grid-cols-2 gap-10 items-start">
-        <div>
-          <h2 class="mb-6">Roaches & Boxelder Bugs</h2>
-          <h3 class="mb-3">Boxelder Bugs</h3>
-          <p class="text-sm leading-relaxed mb-4" style="color: var(--color-muted-foreground); font-family: var(--font-body);">Boxelder bugs are familiar insects to most people. They are generally not noticed during summer, but often can become an issue when they try to move into homes during fall as they search for overwintering sites.</p>
-          <p class="text-sm leading-relaxed mb-4" style="color: var(--color-muted-foreground); font-family: var(--font-body);">Adult boxelder bugs are about 1/2-inch long, black with orange or red markings, including three stripes on the prothorax. Their wings lay flat over their bodies. The immature nymphs are 1/16th-inch long and bright red when they first hatch.</p>
-          <p class="text-sm leading-relaxed" style="color: var(--color-muted-foreground); font-family: var(--font-body);">Boxelder bugs are primarily a nuisance because they enter homes and other buildings, often in large numbers. When abundant, they can stain walls, curtains, and other surfaces with their excrement.</p>
-        </div>
-        <div>
-          <img src="/images/shutterstock_116965141.jpg" alt="Boxelder bug" class="w-full object-cover" style="border-radius: var(--radius); aspect-ratio: 1/1;" loading="lazy" />
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Service: Centipedes & Millipedes -->
-  <section style="background: var(--color-muted);">
-    <div class="mx-auto" style="max-width: var(--content-max-width); padding: var(--section-padding-y) var(--padding-x-mobile);">
-      <div class="grid md:grid-cols-2 gap-10 items-start">
-        <div class="order-2 md:order-1 flex flex-col gap-4">
-          <img src="/images/shutterstock_133014917.jpg" alt="Centipede" class="w-full object-cover" style="border-radius: var(--radius); aspect-ratio: 16/10;" loading="lazy" />
-          <img src="/images/shutterstock_194141441.jpg" alt="Millipede" class="w-full object-cover" style="border-radius: var(--radius); aspect-ratio: 16/10;" loading="lazy" />
-        </div>
-        <div class="order-1 md:order-2">
-          <h2 class="mb-6">Centipedes & Millipedes</h2>
-          <h3 class="mb-3">Centipedes</h3>
-          <p class="text-sm leading-relaxed mb-6" style="color: var(--color-muted-foreground); font-family: var(--font-body);">The house centipede runs rapidly, holding its body well elevated, suddenly stops, then runs again toward concealment. It is one to two inches long, with very long slender antennae and 15 pairs of long legs. The grayish yellow to brown body has 3 longitudinal dorsal stripes, and the legs are banded with white. This species is found in wet, damp places, especially in basements, in potted plants that are over watered and in bathrooms. Their bite can be painful, but is not generally toxic to humans.</p>
-
-          <h3 class="mb-3">Millipedes</h3>
-          <p class="text-sm leading-relaxed" style="color: var(--color-muted-foreground); font-family: var(--font-body);">Brownish and worm-like in appearance with many body segments. Millipedes have two pairs of legs on each segment. They are typically found in damp environments and can enter homes in large numbers during wet weather. While they do not bite or sting, they can become a significant nuisance when they migrate indoors.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Service: Stinging Insects -->
-  <section style="background: var(--color-background);">
-    <div class="mx-auto" style="max-width: var(--content-max-width); padding: var(--section-padding-y) var(--padding-x-mobile);">
-      <div class="grid md:grid-cols-2 gap-10 items-start">
-        <div>
-          <h2 class="mb-6">Stinging Insects</h2>
-          <div class="p-5 border-l-[3px] mb-6" style="border-color: var(--color-accent-bright); background: #f0f8f4; border-radius: 0 var(--radius) var(--radius) 0;">
-            <p class="text-sm font-semibold" style="color: var(--color-foreground); font-family: var(--font-body);">Exterior treatment only. We are NOT treating any stinging insects inside of a house.</p>
+  <!-- ANTS -->
+  <section class="pest-detail section" id="ants">
+    <div class="container">
+      <div class="detail-layout">
+        <div class="detail-specimen">
+          <div class="specimen-panel">
+            <img src="/images/shutterstock_73929577_-_version_2.jpg" alt="Carpenter ant close-up" width="3420" height="1922" loading="lazy" />
           </div>
-          <p class="text-sm leading-relaxed mb-4" style="color: var(--color-muted-foreground); font-family: var(--font-body);">Whether you are dealing with wasps, yellow jackets, bumble bees, hornets, carpenter bees or other dangerous stinging insects, call A2Z Pest Control to develop a treatment to eliminate them from the outside of your house.</p>
-          <p class="text-sm leading-relaxed mb-4" style="color: var(--color-muted-foreground); font-family: var(--font-body);">Many homemade treatments do not work and you possibly could get stung. DO NOT seal any holes until the nest is professionally treated.</p>
+          <div class="specimen-panel specimen-panel-sm">
+            <img src="/images/shutterstock_212656306.jpg" alt="Odorous house ant" width="1000" height="667" loading="lazy" />
+          </div>
         </div>
-        <div class="flex flex-col gap-4">
-          <img src="/images/shutterstock_163747058.jpg" alt="Wasp nest" class="w-full object-cover" style="border-radius: var(--radius); aspect-ratio: 16/10;" loading="lazy" />
-          <img src="/images/shutterstock_161299019.jpg" alt="Yellow jacket" class="w-full object-cover" style="border-radius: var(--radius); aspect-ratio: 16/10;" loading="lazy" />
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Service: Moths -->
-  <section style="background: var(--color-muted);">
-    <div class="mx-auto" style="max-width: var(--content-max-width); padding: var(--section-padding-y) var(--padding-x-mobile);">
-      <div class="grid md:grid-cols-2 gap-10 items-start">
-        <div class="order-2 md:order-1">
-          <img src="/images/shutterstock_117988558.jpg" alt="Indian meal moth" class="w-full object-cover" style="border-radius: var(--radius); aspect-ratio: 1/1;" loading="lazy" />
-        </div>
-        <div class="order-1 md:order-2">
-          <h2 class="mb-6">Moths</h2>
-          <h3 class="mb-3">Indian Meal Moth</h3>
-          <p class="text-sm leading-relaxed mb-4" style="color: var(--color-muted-foreground); font-family: var(--font-body);">Indian meal moths are one of the most common stored product pests found in homes, food processing plants, grain storage and processing facilities. The larvae prefer to feed on coarsely ground flour and meal but commonly feed on whole grains, dried fruit, nuts, chocolate, beans, crackers, biscuits, dry dog food, bird seed, and red peppers.</p>
-          <p class="text-sm leading-relaxed mb-4" style="color: var(--color-muted-foreground); font-family: var(--font-body);">The adult females lay 100 to 400 eggs at night on the larval food over a 1 to 18 day period. The average life cycle, egg to egg, requires 25 to 135 days. The adults are more active at dusk and are attracted to light.</p>
-          <p class="text-sm leading-relaxed" style="color: var(--color-muted-foreground); font-family: var(--font-body);">The larvae produce a silk webbing over the surface of the materials upon which they are feeding. The webbing contains large amounts of their frass (feces).</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Service: Fleas -->
-  <section style="background: var(--color-background);">
-    <div class="mx-auto" style="max-width: var(--content-max-width); padding: var(--section-padding-y) var(--padding-x-mobile);">
-      <div class="grid md:grid-cols-2 gap-10 items-start">
-        <div>
-          <h2 class="mb-6">Fleas</h2>
-          <p class="text-sm leading-relaxed mb-4" style="color: var(--color-muted-foreground); font-family: var(--font-body);">The average flea ranges from 1/12 to 1/6 inch long, very small and without wings. Their bodies are narrow when viewed from the sides, allowing them movement in narrow areas. Because their bodies are covered with spines projecting backward, they are difficult to remove by shaking or scratching.</p>
-          <p class="text-sm leading-relaxed mb-4" style="color: var(--color-muted-foreground); font-family: var(--font-body);">Adults feed on blood, while the larvae eat "flea diet" consisting of dried blood. The flea bite caused by adult feeding can become inflamed. After feeding, the flea will begin mating, starting the cycle all over again.</p>
-          <p class="text-sm leading-relaxed" style="color: var(--color-muted-foreground); font-family: var(--font-body);">Fleas go through a complete metamorphosis with four distinct stages: eggs, larvae, pupae, and adult. Flea eggs are laid on the host or deposited on the floor or ground surface.</p>
-        </div>
-        <div>
-          <img src="/images/shutterstock_71639218.jpg" alt="Flea close-up" class="w-full object-cover" style="border-radius: var(--radius); aspect-ratio: 16/10;" loading="lazy" />
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Service: Silverfish & Earwigs -->
-  <section style="background: var(--color-muted);">
-    <div class="mx-auto" style="max-width: var(--content-max-width); padding: var(--section-padding-y) var(--padding-x-mobile);">
-      <div class="grid md:grid-cols-2 gap-10 items-start">
-        <div class="order-2 md:order-1 flex flex-col gap-4">
-          <img src="/images/shutterstock_125946692.jpg" alt="Silverfish" class="w-full object-cover" style="border-radius: var(--radius); aspect-ratio: 16/10;" loading="lazy" />
-          <img src="/images/shutterstock_105012449.jpg" alt="Earwig" class="w-full object-cover" style="border-radius: var(--radius); aspect-ratio: 16/10;" loading="lazy" />
-        </div>
-        <div class="order-1 md:order-2">
-          <h2 class="mb-6">Silverfish & Earwigs</h2>
-          <h3 class="mb-3">Silverfish</h3>
-          <p class="text-sm leading-relaxed mb-6" style="color: var(--color-muted-foreground); font-family: var(--font-body);">Silverfish are always wingless and silvery to brown in color because their bodies are covered with fine scales. They are generally soft bodied, up to 3/4 inch long, flattened from top to bottom, elongated and oval in shape, with three long tail projections and two long antennae. Females may lay over 100 eggs during their life, deposited singly or in small groups in cracks and crevices. They develop from egg to adult within 4 to 6 weeks and continue to molt throughout their life.</p>
-
-          <h3 class="mb-3">Earwigs</h3>
-          <p class="text-sm leading-relaxed" style="color: var(--color-muted-foreground); font-family: var(--font-body);">Earwigs are elongated, flattened insects with distinctive pincers (cerci) at the end of their abdomen. They are nocturnal and prefer damp, dark areas around foundations, mulch beds, and under stones. While they rarely enter homes in large numbers, they can be a persistent nuisance during warm, humid months.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Service: Carpenter Bees -->
-  <section style="background: var(--color-background);">
-    <div class="mx-auto" style="max-width: var(--content-max-width); padding: var(--section-padding-y) var(--padding-x-mobile);">
-      <div class="grid md:grid-cols-2 gap-10 items-start">
-        <div>
-          <h2 class="mb-6">Carpenter Bees</h2>
-          <p class="text-sm leading-relaxed mb-4" style="color: var(--color-muted-foreground); font-family: var(--font-body);">Carpenter bees resemble bumble bees but have a shiny, hairless abdomen. They bore perfectly round, half-inch diameter holes into wood to create nesting galleries. Common targets include fascia boards, deck railings, eaves, window trim, and untreated wood structures.</p>
-          <p class="text-sm leading-relaxed" style="color: var(--color-muted-foreground); font-family: var(--font-body);">Over time, repeated nesting in the same area can cause significant structural damage. Males are territorial and may hover aggressively near people but cannot sting. Females can sting but rarely do. Professional treatment is the most effective way to eliminate an active carpenter bee infestation.</p>
-        </div>
-        <div class="flex items-center justify-center p-12" style="background: var(--color-muted); border-radius: var(--radius);">
-          <div class="text-center">
-            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-accent); margin: 0 auto 12px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-            <p class="text-sm font-medium" style="color: var(--color-foreground); font-family: var(--font-body);">Call for a free estimate</p>
-            <a href="tel:4128542224" class="text-lg font-bold mt-1 inline-block" style="color: var(--color-accent); font-family: var(--font-display);">412-854-2224</a>
+        <div class="detail-text reveal">
+          <span class="detail-tag">Most Common</span>
+          <h2>Ants</h2>
+          <div class="pest-types">
+            <div class="pest-type">
+              <h3>Carpenter Ant</h3>
+              <p>Among the largest ants, from one-fourth to three-eighths inch long. Most common species is black, but some have reddish or yellowish coloring. Workers have large mandibles.</p>
+              <p>They normally nest in dead portions of standing trees, stumps or logs, but invade homes in search of food. Nests inside homes can do significant damage. They hollow out "galleries" in wood that are so smooth they appear sandpapered.</p>
+              <p>All kinds of houses, regardless of age or type of construction, are vulnerable to infestation. Colonies can contain up to 3,000 workers. Swarms of winged reproductives emerging inside a home in spring are a sure sign of an interior colony.</p>
+            </div>
+            <div class="pest-type">
+              <h3>Odorous House Ant</h3>
+              <p>Dark reddish brown to black, one-tenth inch long. Most likely to invade homes during rainy weather. They travel in trails and forage day and night. When crushed, give off a very unpleasant odor. Colonies are very large.</p>
+            </div>
+            <div class="pest-type">
+              <h3>Pavement Ant</h3>
+              <p>Light brown to black, about one-tenth inch long. Invade homes foraging for food throughout the year. Nests are outdoors under stones, along curbing, or in cracks of pavement. They can nest indoors in walls and under floors. A particular nuisance around homes with slab-on-grade construction.</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Bottom CTA -->
-  <section class="relative overflow-hidden on-primary" style="background: #29303a;">
-    <div class="mx-auto text-center" style="max-width: var(--content-max-width); padding: var(--section-padding-y) var(--padding-x-mobile);">
-      <div class="w-12 h-[3px] mx-auto mb-8" style="background: var(--color-accent-bright);"></div>
-      <h2 class="text-white mb-4">Ready to Take Care of Your Pest Problem?</h2>
-      <p class="text-white/70 mb-8 max-w-lg mx-auto" style="font-family: var(--font-body);">Call us for a free phone estimate. We'll let you know what we can do before you commit to anything.</p>
-      <a href="tel:4128542224" class="inline-block text-4xl md:text-5xl font-bold tracking-tight text-white mb-3" style="font-family: var(--font-display);">412-854-2224</a>
-      <p class="text-sm text-white/50" style="font-family: var(--font-body);">Phones answered Monday-Friday 8am-3pm</p>
+  <!-- RODENTS -->
+  <section class="pest-detail pest-detail-alt section" id="rodents">
+    <div class="container">
+      <div class="detail-layout detail-layout-reverse">
+        <div class="detail-specimen">
+          <div class="specimen-panel">
+            <img src="/images/11226_1429114652_137_11226.jpg" alt="House mouse" width="599" height="364" loading="lazy" />
+          </div>
+          <div class="specimen-panel specimen-panel-sm">
+            <img src="/images/13687_1427306499_54_13687.jpg" alt="Rat" width="599" height="599" loading="lazy" />
+          </div>
+        </div>
+        <div class="detail-text reveal">
+          <span class="detail-tag">Health Risk</span>
+          <h2>Rodents</h2>
+          <div class="pest-types">
+            <div class="pest-type">
+              <h3>House Mouse</h3>
+              <p>Small and slender, three to four inches long, with large ears, small eyes, and pointed nose. Light brown or light gray with rod-shaped droppings.</p>
+              <p>They nest within structures and burrow, establishing a "territory" near food sources, generally 10 to 30 feet from the nest. Excellent climbers. Prolific breeders at two months, with litters as often as every 40 to 50 days.</p>
+              <p>They feed 15 to 20 times per day, can squeeze through a hole one-fourth inch wide, and carry many serious diseases.</p>
+            </div>
+            <div class="pest-type">
+              <h3>Rats</h3>
+              <p>Larger than mice, rats are destructive and dangerous. They contaminate food, cause structural damage by gnawing, and carry diseases. Professional treatment is critical as rats are wary of new objects in their environment, making DIY approaches unreliable.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROACHES & BOXELDER -->
+  <section class="pest-detail section" id="roaches">
+    <div class="container">
+      <div class="detail-layout">
+        <div class="detail-specimen">
+          <div class="specimen-panel">
+            <img src="/images/13661_1427306498_19_13661.jpg" alt="Cockroach" width="599" height="599" loading="lazy" />
+          </div>
+        </div>
+        <div class="detail-text reveal">
+          <span class="detail-tag">Persistent</span>
+          <h2 id="boxelder">Roaches &amp; Boxelder Bugs</h2>
+          <div class="pest-types">
+            <div class="pest-type">
+              <h3>Cockroaches</h3>
+              <p>Cockroaches are among the most resilient household pests. They contaminate food, leave allergens in their droppings, and reproduce rapidly. Professional treatment targets both visible roaches and hidden colonies behind walls and under appliances.</p>
+            </div>
+            <div class="pest-type">
+              <h3>Boxelder Bugs</h3>
+              <p>About half an inch long, black with orange or red markings. Generally not noticed during summer, but often become an issue when they try to move into homes during fall as they search for overwintering sites.</p>
+              <p>Primarily a nuisance because they enter homes in large numbers. When abundant, they can stain walls, curtains, and other surfaces with their excrement.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STINGING INSECTS -->
+  <section class="pest-detail pest-detail-alt section" id="stinging">
+    <div class="container">
+      <div class="detail-layout detail-layout-reverse">
+        <div class="detail-specimen">
+          <div class="specimen-panel">
+            <img src="/images/shutterstock_161299019.jpg" alt="Carpenter bee" width="1000" height="979" loading="lazy" />
+          </div>
+        </div>
+        <div class="detail-text reveal">
+          <span class="detail-tag detail-tag-warn">Exterior Only</span>
+          <h2>Stinging Insects</h2>
+          <div class="pest-types">
+            <div class="pest-type">
+              <p>Wasps, yellow jackets, bumble bees, hornets, carpenter bees, and other dangerous stinging insects. We treat them on the exterior of your house.</p>
+              <p>Many homemade treatments do not work, and you could get stung in the process.</p>
+              <p class="pest-warning"><strong>Do not seal any holes until the nest is professionally treated.</strong> Sealing entry points before treatment traps insects inside walls, causing them to find alternate routes into your living space.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CENTIPEDES & MILLIPEDES -->
+  <section class="pest-detail section" id="centipedes">
+    <div class="container">
+      <div class="detail-layout">
+        <div class="detail-specimen">
+          <div class="specimen-panel">
+            <img src="/images/shutterstock_133014917.jpg" alt="House centipede" width="1000" height="667" loading="lazy" />
+          </div>
+          <div class="specimen-panel specimen-panel-sm">
+            <img src="/images/shutterstock_194141441.jpg" alt="Millipede" width="1000" height="667" loading="lazy" />
+          </div>
+        </div>
+        <div class="detail-text reveal">
+          <span class="detail-tag">Moisture Pest</span>
+          <h2>Centipedes &amp; Millipedes</h2>
+          <div class="pest-types">
+            <div class="pest-type">
+              <h3>Centipedes</h3>
+              <p>The house centipede runs rapidly, holding its body well elevated, suddenly stops, then runs again. One to two inches long, with very long slender antennae and 15 pairs of long legs. Grayish yellow to brown with 3 longitudinal dorsal stripes.</p>
+              <p>Found in wet, damp places, especially basements, in overwatered potted plants, and in bathrooms. Their bite can be painful but is not generally toxic to humans.</p>
+            </div>
+            <div class="pest-type">
+              <h3>Millipedes</h3>
+              <p>Brownish and worm-like with many body segments and two pairs of legs on each segment. They typically live outside in moist vegetation, leaf litter, and mulch. When conditions are right, migrations can occur and large numbers will find their way inside through cracks and crevices.</p>
+              <p>Infestations can build up quickly. A combination of moisture control and treatment provides the best results.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FLEAS -->
+  <section class="pest-detail pest-detail-alt section" id="fleas">
+    <div class="container">
+      <div class="detail-layout detail-layout-reverse">
+        <div class="detail-specimen">
+          <div class="specimen-panel">
+            <img src="/images/shutterstock_71639218.jpg" alt="Flea close-up" width="1000" height="667" loading="lazy" />
+          </div>
+        </div>
+        <div class="detail-text reveal">
+          <span class="detail-tag">Pet Owners</span>
+          <h2>Fleas</h2>
+          <div class="pest-types">
+            <div class="pest-type">
+              <p>Very small, wingless, 1/12 to 1/6 inch long. Their narrow bodies allow movement in tight areas, and backward-projecting spines make them difficult to remove by shaking or scratching.</p>
+              <p>Adults feed on blood. A female will lay up to 200 to 400 eggs. Eggs are deposited on hosts or on floors, upholstery, and pet bedding. Flea larvae are active and hard to spot, found deep in carpets or cracks and crevices of floors.</p>
+              <p>Fleas go through four distinct stages: eggs, larvae, pupae, and adult. Complete treatment needs to address every stage of the lifecycle.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MOTHS -->
+  <section class="pest-detail section" id="moths">
+    <div class="container">
+      <div class="detail-layout">
+        <div class="detail-specimen">
+          <div class="specimen-panel">
+            <img src="/images/shutterstock_117988558.jpg" alt="Indian meal moth" width="1000" height="667" loading="lazy" />
+          </div>
+        </div>
+        <div class="detail-text reveal">
+          <span class="detail-tag">Pantry Pest</span>
+          <h2>Indian Meal Moths</h2>
+          <div class="pest-types">
+            <div class="pest-type">
+              <p>One of the most common stored product pests found in homes and food processing facilities. Adults are more active at dusk and are attracted to light.</p>
+              <p>The larvae feed on coarsely ground flour and meal but commonly feed on whole grains, dried fruit, nuts, chocolate, beans, crackers, biscuits, dry dog food, bird seed, and red peppers.</p>
+              <p>Larvae produce a silk webbing over the surface of materials they're feeding on, containing large amounts of frass. If you suspect a problem, discard any infested food and store all other food in sealed containers.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SILVERFISH & EARWIGS -->
+  <section class="pest-detail pest-detail-alt section" id="silverfish">
+    <div class="container">
+      <div class="detail-layout detail-layout-reverse">
+        <div class="detail-specimen">
+          <div class="specimen-panel">
+            <img src="/images/shutterstock_125946692.jpg" alt="Silverfish" width="1000" height="667" loading="lazy" />
+          </div>
+          <div class="specimen-panel specimen-panel-sm">
+            <img src="/images/shutterstock_105012449.jpg" alt="Earwig" width="1000" height="667" loading="lazy" />
+          </div>
+        </div>
+        <div class="detail-text reveal">
+          <span class="detail-tag">Moisture Pest</span>
+          <h2>Silverfish &amp; Earwigs</h2>
+          <div class="pest-types">
+            <div class="pest-type">
+              <h3>Silverfish</h3>
+              <p>Always wingless, silvery to brown, covered in fine scales. Adults are up to 3/4 inch long, flattened, elongated and oval with three long tail projections and two long antennae.</p>
+              <p>They prefer carbohydrates and protein, including flour, dried meat, rolled oats, paper, and glue. They can survive long periods without food but require high humidity (75% to 90%) and temperatures between 70 and 80 degrees F.</p>
+              <p>Primarily a nuisance pest. They can contaminate food, damage paper goods, stain clothing, and occasionally damage book bindings, curtains, and wallpaper.</p>
+            </div>
+            <div class="pest-type">
+              <h3>Earwigs</h3>
+              <p>Moisture-loving insects that typically live outdoors in damp, sheltered spots. They enter homes seeking moisture and shelter, especially during dry spells. While their pincers look alarming, they are generally harmless to people.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="services-cta section">
+    <div class="container">
+      <div class="cta-block reveal">
+        <h2>Not sure what you're dealing with?</h2>
+        <p>Call and describe what you're seeing. We'll identify it and give you a price over the phone.</p>
+        <a href="tel:412-854-2224" class="btn btn-primary btn-lg">Call 412-854-2224</a>
+      </div>
     </div>
   </section>
 
 </Layout>
+
+<style>
+  .page-hero {
+    padding-top: calc(80px + var(--space-xl));
+    padding-bottom: var(--space-lg);
+    background:
+      linear-gradient(180deg, oklch(0.12 0.02 155 / 0.3) 0%, var(--black) 100%);
+  }
+
+  .page-title {
+    font-size: clamp(3rem, 7vw, 7rem);
+    margin-bottom: var(--space-sm);
+  }
+
+  .page-intro {
+    color: var(--text-dim);
+    font-size: 1.1rem;
+    max-width: 600px;
+    line-height: 1.7;
+  }
+
+  /* ============ PEST DETAIL SECTIONS ============ */
+  .pest-detail {
+    scroll-margin-top: 80px;
+    border-top: 1px solid var(--border);
+  }
+
+  .pest-detail-alt {
+    background: var(--dark);
+  }
+
+  .detail-layout {
+    display: grid;
+    grid-template-columns: 0.45fr 0.55fr;
+    gap: var(--space-xl);
+    align-items: start;
+  }
+
+  .detail-layout-reverse {
+    grid-template-columns: 0.55fr 0.45fr;
+
+    .detail-specimen {
+      order: 1;
+    }
+  }
+
+  .detail-specimen {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    position: sticky;
+    top: 100px;
+  }
+
+  .specimen-panel {
+    background: var(--specimen-bg);
+    border-radius: var(--radius-lg);
+    padding: var(--space-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 30px oklch(0 0 0 / 0.3);
+    border: 1px solid oklch(0.3 0.01 145 / 0.2);
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: var(--radius);
+      transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    &:hover img {
+      transform: scale(1.06);
+    }
+  }
+
+  .specimen-panel-sm {
+    max-width: 60%;
+  }
+
+  .detail-tag {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--green);
+    background: var(--green-glass);
+    padding: 0.3rem 0.8rem;
+    border-radius: 100px;
+    margin-bottom: var(--space-sm);
+  }
+
+  .detail-tag-warn {
+    color: oklch(0.75 0.15 60);
+    background: oklch(0.75 0.15 60 / 0.12);
+  }
+
+  .detail-text h2 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    margin-bottom: var(--space-md);
+  }
+
+  .pest-types {
+    display: grid;
+    gap: var(--space-md);
+  }
+
+  .pest-type {
+    h3 {
+      font-size: 1.1rem;
+      color: var(--green);
+      margin-bottom: 0.4rem;
+      letter-spacing: 0.08em;
+    }
+
+    p {
+      color: var(--text-dim);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin-bottom: 0.6rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .pest-warning {
+    background: oklch(0.75 0.15 60 / 0.08);
+    border-left: 3px solid oklch(0.75 0.15 60);
+    padding: var(--space-sm) var(--space-md);
+    border-radius: 0 var(--radius) var(--radius) 0;
+
+    strong {
+      color: oklch(0.85 0.12 60);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .detail-layout,
+    .detail-layout-reverse {
+      grid-template-columns: 1fr;
+    }
+
+    .detail-layout-reverse .detail-specimen {
+      order: 0;
+    }
+
+    .detail-specimen {
+      position: static;
+      flex-direction: row;
+    }
+
+    .specimen-panel-sm {
+      max-width: 40%;
+    }
+  }
+
+  /* ============ SERVICES CTA ============ */
+  .services-cta {
+    text-align: center;
+    background:
+      radial-gradient(ellipse at 50% 50%, oklch(0.15 0.04 155 / 0.3), transparent 60%),
+      var(--black);
+  }
+
+  .cta-block {
+    h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      text-transform: uppercase;
+      margin-bottom: var(--space-sm);
+    }
+
+    p {
+      color: var(--text-dim);
+      font-size: 1.1rem;
+      margin-bottom: var(--space-md);
+    }
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.75rem 1.75rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    border-radius: var(--radius);
+    transition: all 0.25s ease;
+  }
+
+  .btn-primary {
+    background: var(--green);
+    color: var(--black);
+
+    &:hover {
+      background: var(--green-bright);
+      box-shadow: 0 0 30px oklch(0.72 0.19 155 / 0.3);
+    }
+  }
+
+  .btn-lg {
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+  }
+</style>

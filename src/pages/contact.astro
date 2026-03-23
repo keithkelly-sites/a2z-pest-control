@@ -2,151 +2,347 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Contact - A2Z Pest Control LLC" description="Call A2Z Pest Control at 412-854-2224 for a free phone estimate. Serving the Pittsburgh area Monday-Friday 8am-3pm.">
+<Layout title="Contact Us | A2Z Pest Control LLC" description="Get in touch with A2Z Pest Control. Call 412-854-2224 for free phone estimates. Serving Allegheny, Butler, and Washington Counties.">
 
-  <!-- Page Header -->
-  <section class="relative overflow-hidden on-primary" style="background: #29303a;">
-    <div class="absolute inset-0 opacity-[0.06]" style="background: repeating-linear-gradient(135deg, transparent 0 12px, #3a4350 12px 13px);"></div>
-    <div class="relative mx-auto" style="max-width: var(--content-max-width); padding: 80px var(--padding-x-mobile);">
-      <h1 class="text-white mb-3">Contact A2Z Pest Control</h1>
-      <p class="text-white/70 text-lg" style="font-family: var(--font-body);">We answer phones Monday-Friday 8am to 3pm.</p>
+  <section class="page-hero">
+    <div class="container">
+      <h1 class="page-title">Contact Us</h1>
+      <p class="page-intro">Got a pest problem? Call us. We'll identify what you're dealing with and give you a price right over the phone.</p>
     </div>
   </section>
 
-  <!-- Contact Options -->
-  <section style="background: var(--color-background);">
-    <div class="mx-auto grid md:grid-cols-2 gap-12" style="max-width: var(--content-max-width); padding: var(--section-padding-y) var(--padding-x-mobile);">
+  <section class="contact-section section">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-card contact-card-primary reveal">
+          <div class="card-icon" aria-hidden="true">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+          </div>
+          <h2>Call Us</h2>
+          <a href="tel:412-854-2224" class="contact-value contact-phone">412-854-2224</a>
+          <p class="contact-note">Free phone estimates. Most jobs quoted over the phone.</p>
+        </div>
 
-      <!-- Left: Contact Info -->
-      <div>
-        <h2 class="mb-6">Get in Touch</h2>
-        <a href="tel:4128542224" class="inline-block text-3xl font-bold tracking-tight mb-2" style="color: var(--color-accent); font-family: var(--font-display);">412-854-2224</a>
-        <p class="text-sm mb-6" style="color: var(--color-muted-foreground); font-family: var(--font-body);">Monday-Friday 8am-3pm</p>
+        <div class="contact-card reveal">
+          <div class="card-icon" aria-hidden="true">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+          </div>
+          <h2>Email Us</h2>
+          <a href="mailto:a2zpestcontrolllc@gmail.com" class="contact-value">a2zpestcontrolllc@gmail.com</a>
+          <p class="contact-note">For non-urgent questions. We respond during business hours.</p>
+        </div>
 
-        <a href="mailto:a2zpestcontrolllc@gmail.com" class="text-base font-medium mb-8 inline-block" style="color: var(--color-accent); font-family: var(--font-body);">a2zpestcontrolllc@gmail.com</a>
+        <div class="contact-card reveal">
+          <div class="card-icon" aria-hidden="true">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+          </div>
+          <h2>Hours</h2>
+          <p class="contact-value">Monday &ndash; Friday<br />8:00 AM &ndash; 3:00 PM</p>
+          <p class="contact-note">Closed Saturday and Sunday.</p>
+        </div>
 
-        <p class="text-sm leading-relaxed mt-2 mb-8 max-w-md" style="color: var(--color-muted-foreground); font-family: var(--font-body);">For a faster response, call us directly. We offer free phone estimates and can usually answer your questions on the first call.</p>
-
-        <div class="flex items-center gap-3">
-          <img src="/images/credit_card_logos_10.gif" alt="Accepted payment methods" width="168" height="25" />
-          <p class="text-xs" style="color: var(--color-muted-foreground); font-family: var(--font-body);">We accept major credit cards</p>
+        <div class="contact-card reveal">
+          <div class="card-icon" aria-hidden="true">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+          </div>
+          <h2>Service Area</h2>
+          <p class="contact-value">Pittsburgh Area</p>
+          <p class="contact-note">Allegheny, Butler, and Washington Counties.</p>
         </div>
       </div>
+    </div>
+  </section>
 
-      <!-- Right: Contact Form -->
-      <div>
-        <form id="contact-form" class="space-y-5">
-          <div>
-            <label for="name" class="block text-sm font-medium mb-1.5" style="color: var(--color-foreground); font-family: var(--font-body);">Name</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              required
-              class="w-full px-4 py-3 text-sm bg-white border outline-none"
-              style="border-color: var(--color-border); border-radius: var(--radius); font-family: var(--font-body); transition: border-color 0.15s ease;"
-            />
+  <section class="form-section section">
+    <div class="container">
+      <div class="form-wrapper reveal">
+        <h2>Send Us a Message</h2>
+        <p class="form-intro">For non-urgent questions, fill out the form below and we'll get back to you during business hours.</p>
+        <form action="https://api.keithkelly.dev/contact/a2z-pest-control" method="POST" class="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Name <span class="required-star" aria-hidden="true">*</span> <span class="required-text">(required)</span></label>
+              <input type="text" id="name" name="name" required autocomplete="name" />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone <span class="required-star" aria-hidden="true">*</span> <span class="required-text">(required)</span></label>
+              <input type="tel" id="phone" name="phone" required autocomplete="tel" />
+            </div>
           </div>
-          <div>
-            <label for="phone" class="block text-sm font-medium mb-1.5" style="color: var(--color-foreground); font-family: var(--font-body);">Phone</label>
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
-              required
-              class="w-full px-4 py-3 text-sm bg-white border outline-none"
-              style="border-color: var(--color-border); border-radius: var(--radius); font-family: var(--font-body); transition: border-color 0.15s ease;"
-            />
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" />
           </div>
-          <div>
-            <label for="email" class="block text-sm font-medium mb-1.5" style="color: var(--color-foreground); font-family: var(--font-body);">Email</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              class="w-full px-4 py-3 text-sm bg-white border outline-none"
-              style="border-color: var(--color-border); border-radius: var(--radius); font-family: var(--font-body); transition: border-color 0.15s ease;"
-            />
+          <div class="form-group">
+            <label for="message">Message <span class="required-star" aria-hidden="true">*</span> <span class="required-text">(required)</span></label>
+            <textarea id="message" name="message" rows="5" required></textarea>
           </div>
-          <div>
-            <label for="pest" class="block text-sm font-medium mb-1.5" style="color: var(--color-foreground); font-family: var(--font-body);">Pest or Issue</label>
-            <input
-              type="text"
-              id="pest"
-              name="pest"
-              placeholder="e.g., Ants in kitchen, mice in basement"
-              class="w-full px-4 py-3 text-sm bg-white border outline-none"
-              style="border-color: var(--color-border); border-radius: var(--radius); font-family: var(--font-body); transition: border-color 0.15s ease;"
-            />
-          </div>
-          <div>
-            <label for="message" class="block text-sm font-medium mb-1.5" style="color: var(--color-foreground); font-family: var(--font-body);">Message or Details</label>
-            <textarea
-              id="message"
-              name="message"
-              rows="4"
-              required
-              class="w-full px-4 py-3 text-sm bg-white border outline-none resize-y"
-              style="border-color: var(--color-border); border-radius: var(--radius); font-family: var(--font-body); transition: border-color 0.15s ease;"
-            ></textarea>
-          </div>
-          <button
-            type="submit"
-            class="inline-flex items-center justify-center px-8 py-3.5 text-sm font-semibold w-full sm:w-auto"
-            style="background: var(--color-primary); color: var(--color-primary-foreground); border-radius: var(--radius-full); font-family: var(--font-body);"
-          >
-            Send Message
-          </button>
-          <p class="text-xs mt-2" style="color: var(--color-muted-foreground); font-family: var(--font-body);">Or call us directly at <a href="tel:4128542224" style="color: var(--color-accent);">412-854-2224</a> for a free phone estimate.</p>
+          <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
         </form>
-
-        <div id="form-success" class="hidden p-8 text-center" style="background: var(--color-muted); border-radius: var(--radius);">
-          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-accent); margin: 0 auto 16px;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          <p class="text-lg font-semibold mb-2" style="font-family: var(--font-display);">Thanks for reaching out!</p>
-          <p class="text-sm" style="color: var(--color-muted-foreground); font-family: var(--font-body);">We'll get back to you soon. For a faster response, call us at <a href="tel:4128542224" style="color: var(--color-accent);">412-854-2224</a>.</p>
-        </div>
       </div>
     </div>
   </section>
 
-  <!-- Service Area Reminder -->
-  <section style="background: var(--color-muted);">
-    <div class="mx-auto text-center" style="max-width: var(--content-max-width); padding: 48px var(--padding-x-mobile);">
-      <p class="text-sm max-w-xl mx-auto" style="color: var(--color-muted-foreground); font-family: var(--font-body);">We serve Allegheny, Butler, and Washington Counties in the Pittsburgh area. Not sure if you're covered? Call us and we'll confirm before you schedule anything.</p>
+  <section class="payment-section section">
+    <div class="container">
+      <div class="payment-block reveal">
+        <h2>Payment</h2>
+        <p>We accept all major credit cards.</p>
+        <img src="/images/credit_card_logos_10.gif" alt="We accept Visa, MasterCard, American Express, and Discover" width="336" height="50" class="payment-logos" loading="lazy" />
+      </div>
     </div>
   </section>
 
+  <section class="reviews-cta section">
+    <div class="container">
+      <div class="cta-block reveal">
+        <h2>See What Our Customers Say</h2>
+        <p>Check out our reviews on Google to hear from homeowners we've helped across the Pittsburgh area.</p>
+        <a href="https://www.google.com/search?q=a2z+pest+control+pittsburgh+reviews" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">Read Google Reviews</a>
+      </div>
+    </div>
+  </section>
 
 </Layout>
 
-<script>
-  const form = document.getElementById('contact-form') as HTMLFormElement | null;
-  const success = document.getElementById('form-success');
-  form?.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const data = Object.fromEntries(new FormData(form));
-    try {
-      await fetch('https://api.keithkelly.dev/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...data, siteToken: '52faa681-03cd-4146-9b89-2ca256470cf5' }),
-      });
-    } catch {
-      // Show success regardless
-    }
-    form.classList.add('hidden');
-    success?.classList.remove('hidden');
-  });
+<style>
+  .page-hero {
+    padding-top: calc(80px + var(--space-xl));
+    padding-bottom: var(--space-lg);
+    background:
+      linear-gradient(180deg, oklch(0.12 0.02 155 / 0.3) 0%, var(--black) 100%);
+  }
 
-  // Focus styles for inputs
-  document.querySelectorAll('#contact-form input, #contact-form textarea').forEach(el => {
-    el.addEventListener('focus', () => {
-      (el as HTMLElement).style.borderColor = '#22be81';
-      (el as HTMLElement).style.boxShadow = '0 0 0 3px rgba(34, 190, 129, 0.15)';
-    });
-    el.addEventListener('blur', () => {
-      (el as HTMLElement).style.borderColor = 'var(--color-border)';
-      (el as HTMLElement).style.boxShadow = 'none';
-    });
-  });
-</script>
+  .page-title {
+    font-size: clamp(3rem, 7vw, 7rem);
+    margin-bottom: var(--space-sm);
+  }
+
+  .page-intro {
+    color: var(--text-dim);
+    font-size: 1.1rem;
+    max-width: 520px;
+    line-height: 1.7;
+  }
+
+  /* ============ CONTACT GRID ============ */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2px;
+  }
+
+  .contact-card {
+    background: var(--dark);
+    padding: var(--space-lg);
+    border-radius: var(--radius);
+    transition: background 0.3s;
+
+    &:hover {
+      background: var(--dark-elevated);
+
+      .card-icon {
+        color: var(--green);
+        border-color: var(--green-dim);
+      }
+    }
+  }
+
+  .contact-card-primary {
+    background: oklch(0.12 0.03 155);
+    border: 1px solid var(--green-dim);
+
+    .card-icon {
+      color: var(--green);
+      border-color: var(--green-dim);
+    }
+  }
+
+  .card-icon {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    color: var(--text-dim);
+    margin-bottom: var(--space-md);
+    transition: color 0.3s, border-color 0.3s;
+  }
+
+  .contact-card h2 {
+    font-size: 1rem;
+    letter-spacing: 0.12em;
+    color: var(--text-dim);
+    margin-bottom: var(--space-sm);
+  }
+
+  .contact-value {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--white);
+    display: block;
+    margin-bottom: var(--space-xs);
+    line-height: 1.4;
+    word-break: break-word;
+  }
+
+  .contact-phone {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    letter-spacing: 0.03em;
+    color: var(--green);
+    transition: color 0.2s;
+
+    &:hover {
+      color: var(--green-bright);
+    }
+  }
+
+  .contact-note {
+    font-size: 0.85rem;
+    color: var(--text-faint);
+    line-height: 1.6;
+  }
+
+  @media (max-width: 600px) {
+    .contact-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* ============ FORM ============ */
+  .form-section {
+    border-top: 1px solid var(--border);
+  }
+
+  .form-wrapper {
+    max-width: 640px;
+    margin-inline: auto;
+
+    h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.5rem, 3vw, 2.5rem);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: var(--space-sm);
+    }
+  }
+
+  .form-intro {
+    color: var(--text-dim);
+    margin-bottom: var(--space-md);
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+  }
+
+  @media (max-width: 500px) {
+    .form-row {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .btn-primary {
+    background: var(--green);
+    color: var(--black);
+    min-height: 48px;
+
+    &:hover {
+      background: var(--green-bright);
+      box-shadow: 0 0 30px oklch(0.72 0.19 155 / 0.3);
+    }
+  }
+
+  .btn-lg {
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+  }
+
+  /* ============ PAYMENT ============ */
+  .payment-section {
+    border-top: 1px solid var(--border);
+  }
+
+  .payment-block {
+    text-align: center;
+
+    h2 {
+      font-size: 1rem;
+      letter-spacing: 0.12em;
+      color: var(--text-dim);
+      margin-bottom: var(--space-sm);
+    }
+
+    p {
+      color: var(--text-dim);
+      margin-bottom: var(--space-md);
+    }
+  }
+
+  .payment-logos {
+    margin-inline: auto;
+    opacity: 0.7;
+    filter: brightness(1.3);
+  }
+
+  /* ============ REVIEWS CTA ============ */
+  .reviews-cta {
+    text-align: center;
+    border-top: 1px solid var(--border);
+  }
+
+  .cta-block {
+    h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      text-transform: uppercase;
+      margin-bottom: var(--space-sm);
+    }
+
+    p {
+      color: var(--text-dim);
+      font-size: 1.05rem;
+      margin-bottom: var(--space-md);
+      max-width: 500px;
+      margin-inline: auto;
+    }
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.75rem 1.75rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    border-radius: var(--radius);
+    transition: all 0.25s ease;
+  }
+
+  .btn-ghost {
+    border: 1px solid var(--border);
+    color: var(--text);
+
+    &:hover {
+      border-color: var(--green-dim);
+      color: var(--green);
+      background: var(--green-glass);
+    }
+  }
+</style>

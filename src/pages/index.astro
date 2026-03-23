@@ -1,154 +1,746 @@
 ---
+/*
+  DESIGN CONCEPT: "The Specimen Cabinet"
+  
+  Inspired by Counter Forms' editorial grid and Metalab's dark-theme 
+  confidence for service businesses. The tension: a family business 
+  that handles things people find repulsive. They drive unmarked 
+  vehicles — they understand discretion. 
+  
+  The site treats pest control like clinical expertise. Dark museum-like 
+  backgrounds with pest photography presented as scientific specimens 
+  on bright white panels. The white-background stock photos become 
+  features, not bugs (pun intended) — like specimens pinned in a 
+  naturalist's cabinet. Massive condensed type creates authority.
+  
+  Reference influences:
+  - Counter Forms: editorial grid, high-contrast imagery, desaturation effects
+  - Metalab: dark theme for service business, video-first confidence
+  - Daylight Computer: asymmetric layouts, parallax depth, warm neutrals
+*/
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Pittsburgh Pest Control - A2Z Pest Control LLC" description="Family-owned pest control serving Allegheny, Butler, and Washington Counties since 1993. Free phone estimates, unmarked vehicles, no pressure sales. Call 412-854-2224.">
+<Layout title="A2Z Pest Control LLC | Pittsburgh Area Pest Control Since 1993">
 
-  <!-- Hero -->
-  <section class="relative overflow-hidden on-primary" style="background: #29303a;">
-    <div class="absolute inset-0 opacity-[0.08]" style="background: repeating-linear-gradient(135deg, transparent 0 12px, #3a4350 12px 13px);"></div>
-    <div class="relative mx-auto grid md:grid-cols-2 gap-10 items-center" style="max-width: var(--content-max-width); padding: 100px var(--padding-x-mobile) 80px;">
-      <div>
-        <div class="w-12 h-[3px] mb-8" style="background: var(--color-accent-bright);"></div>
-        <h1 class="text-white mb-6">Pittsburgh's Trusted Pest Control. Since 1993.</h1>
-        <p class="text-white/80 text-lg mb-10 leading-relaxed max-w-xl">Family-owned, discreet, and on time. We treat your home like our own. Serving Allegheny, Butler, and Washington Counties.</p>
-        <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
-          <a
-            href="tel:4128542224"
-            class="inline-flex items-center gap-2 text-base font-semibold px-7 py-3.5"
-            style="background: var(--color-accent-bright); color: var(--color-foreground); border-radius: var(--radius-full); font-family: var(--font-body);"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-            Call for a Free Estimate
-          </a>
-          <a
-            href="/services"
-            class="inline-flex items-center gap-2 text-base font-semibold px-7 py-3.5 border-2 border-white/40 text-white hover:border-white"
-            style="border-radius: var(--radius-full); font-family: var(--font-body);"
-          >
-            See Our Services
-          </a>
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "PestControlService",
+    "name": "A2Z Pest Control LLC",
+    "url": "https://a2z-pest-control.keithkelly.dev",
+    "telephone": "412-854-2224",
+    "email": "a2zpestcontrolllc@gmail.com",
+    "image": "https://a2z-pest-control.keithkelly.dev/images/logo.png",
+    "description": "Family-owned pest control serving the Pittsburgh area since 1993. Dependable, budget friendly, unmarked vehicles.",
+    "areaServed": [
+      { "@type": "AdministrativeArea", "name": "Allegheny County, PA" },
+      { "@type": "AdministrativeArea", "name": "Butler County, PA" },
+      { "@type": "AdministrativeArea", "name": "Washington County, PA" }
+    ],
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "15:00"
+    },
+    "founder": {
+      "@type": "Organization",
+      "foundingDate": "1993"
+    }
+  })} />
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <p class="hero-eyebrow">Pittsburgh's family-owned pest control since 1993</p>
+        <h1 class="hero-headline">
+          <span class="hero-line hero-line-1">Every Pest</span>
+          <span class="hero-line hero-line-2">Handled<span class="hero-dot">.</span></span>
+        </h1>
+        <p class="hero-sub">From ants to rodents to stinging insects. 30+ years protecting homes across Allegheny, Butler, and Washington Counties.</p>
+        <div class="hero-actions">
+          <a href="tel:412-854-2224" class="btn btn-primary">Call 412-854-2224</a>
+          <a href="/services" class="btn btn-ghost">View Services</a>
+        </div>
+        <p class="hero-note">Free phone estimates. No pressure. Unmarked vehicles.</p>
+      </div>
+      <div class="hero-specimen" aria-hidden="true">
+        <div class="specimen-frame">
+          <img src="/images/shutterstock_73929577_-_version_2.jpg" alt="" class="specimen-img" width="3420" height="1922" loading="eager" fetchpriority="high" />
+          <span class="specimen-label">Camponotus pennsylvanicus</span>
+          <span class="specimen-common">Carpenter Ant</span>
         </div>
       </div>
-      <div class="hidden md:block">
-        <img
-          src="/images/unadjustednonraw_thumb_a1e1.jpg"
-          alt="The A2Z Pest Control family"
-          class="w-full rounded-lg object-cover"
-          style="aspect-ratio: 4/3; border-radius: var(--radius);"
-        />
+    </div>
+    <div class="hero-scroll-cue" aria-hidden="true">
+      <span class="scroll-line"></span>
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <section class="trust-bar">
+    <div class="container">
+      <ul class="trust-list">
+        <li class="trust-item">
+          <span class="trust-number">30+</span>
+          <span class="trust-label">Years in business</span>
+        </li>
+        <li class="trust-item">
+          <span class="trust-number">3</span>
+          <span class="trust-label">Counties served</span>
+        </li>
+        <li class="trust-item">
+          <span class="trust-number">1000s</span>
+          <span class="trust-label">Homes treated</span>
+        </li>
+        <li class="trust-item">
+          <span class="trust-icon">&#x2714;</span>
+          <span class="trust-label">Free phone estimates</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- SERVICES GRID -->
+  <section class="services-section section" id="services">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 class="section-title">What We Handle</h2>
+        <p class="section-sub">Click any pest to learn more about identification and treatment.</p>
+      </div>
+      <div class="pest-grid">
+        <a href="/services#ants" class="pest-card pest-card-featured reveal">
+          <div class="pest-card-image">
+            <img src="/images/shutterstock_73929577_-_version_2.jpg" alt="Carpenter ant macro photograph" width="3420" height="1922" loading="lazy" />
+          </div>
+          <div class="pest-card-info">
+            <h3>Ants</h3>
+            <p>Carpenter, odorous house, pavement</p>
+          </div>
+        </a>
+        <a href="/services#rodents" class="pest-card reveal">
+          <div class="pest-card-image">
+            <img src="/images/11226_1429114652_137_11226.jpg" alt="House mouse" width="599" height="364" loading="lazy" />
+          </div>
+          <div class="pest-card-info">
+            <h3>Rodents</h3>
+            <p>Mice and rats</p>
+          </div>
+        </a>
+        <a href="/services#roaches" class="pest-card reveal">
+          <div class="pest-card-image">
+            <img src="/images/13661_1427306498_19_13661.jpg" alt="Cockroach" width="599" height="599" loading="lazy" />
+          </div>
+          <div class="pest-card-info">
+            <h3>Roaches</h3>
+            <p>Cockroach elimination</p>
+          </div>
+        </a>
+        <a href="/services#stinging" class="pest-card reveal">
+          <div class="pest-card-image">
+            <img src="/images/shutterstock_161299019.jpg" alt="Carpenter bee" width="1000" height="979" loading="lazy" />
+          </div>
+          <div class="pest-card-info">
+            <h3>Stinging Insects</h3>
+            <p>Wasps, hornets, carpenter bees</p>
+          </div>
+        </a>
+        <a href="/services#centipedes" class="pest-card reveal">
+          <div class="pest-card-image">
+            <img src="/images/shutterstock_133014917.jpg" alt="House centipede" width="1000" height="667" loading="lazy" />
+          </div>
+          <div class="pest-card-info">
+            <h3>Centipedes</h3>
+            <p>Centipedes and millipedes</p>
+          </div>
+        </a>
+        <a href="/services#fleas" class="pest-card reveal">
+          <div class="pest-card-image">
+            <img src="/images/shutterstock_71639218.jpg" alt="Flea" width="1000" height="667" loading="lazy" />
+          </div>
+          <div class="pest-card-info">
+            <h3>Fleas</h3>
+            <p>Complete flea treatment</p>
+          </div>
+        </a>
+        <a href="/services#boxelder" class="pest-card reveal">
+          <div class="pest-card-image">
+            <img src="/images/shutterstock_116965141.jpg" alt="Boxelder bug" width="1000" height="667" loading="lazy" />
+          </div>
+          <div class="pest-card-info">
+            <h3>Boxelder Bugs</h3>
+            <p>Seasonal invasion control</p>
+          </div>
+        </a>
+        <a href="/services#moths" class="pest-card reveal">
+          <div class="pest-card-image">
+            <img src="/images/shutterstock_117988558.jpg" alt="Indian meal moth" width="1000" height="667" loading="lazy" />
+          </div>
+          <div class="pest-card-info">
+            <h3>Pantry Moths</h3>
+            <p>Indian meal moth removal</p>
+          </div>
+        </a>
+        <a href="/services#silverfish" class="pest-card reveal">
+          <div class="pest-card-image">
+            <img src="/images/shutterstock_125946692.jpg" alt="Silverfish" width="1000" height="667" loading="lazy" />
+          </div>
+          <div class="pest-card-info">
+            <h3>Silverfish &amp; Earwigs</h3>
+            <p>Moisture pest control</p>
+          </div>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- Trust Signals -->
-  <section style="background: var(--color-muted);">
-    <div class="mx-auto" style="max-width: var(--content-max-width); padding: 48px var(--padding-x-mobile);">
-      <div class="grid grid-cols-2 md:grid-cols-5 gap-8 md:gap-6">
-        <div class="flex flex-col items-center text-center gap-3">
-          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-accent);"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-          <p class="text-sm font-medium" style="color: var(--color-foreground); font-family: var(--font-body);">30+ Years Experience</p>
+  <!-- WHY A2Z -->
+  <section class="why-section section">
+    <div class="container">
+      <div class="why-layout">
+        <div class="why-text reveal">
+          <h2 class="section-title">Why Homeowners<br />Choose A2Z</h2>
+          <div class="why-points">
+            <div class="why-point">
+              <h3>Unmarked Vehicles</h3>
+              <p>Your neighbors don't need to know. We arrive in plain vehicles so your pest problem stays private.</p>
+            </div>
+            <div class="why-point">
+              <h3>Free Phone Estimates</h3>
+              <p>Call, describe the problem, get a price. No site visits required for most jobs. No pressure, no upselling.</p>
+            </div>
+            <div class="why-point">
+              <h3>On-Time Appointments</h3>
+              <p>We show up when we say we will. You've got enough going on without waiting around for a technician who's running late.</p>
+            </div>
+            <div class="why-point">
+              <h3>Screened &amp; Trained</h3>
+              <p>Every employee is background-checked and trained. As parents and pet owners ourselves, we treat your home like our own.</p>
+            </div>
+          </div>
         </div>
-        <div class="flex flex-col items-center text-center gap-3">
-          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-accent);"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-          <p class="text-sm font-medium" style="color: var(--color-foreground); font-family: var(--font-body);">Family-Owned & Operated</p>
-        </div>
-        <div class="flex flex-col items-center text-center gap-3">
-          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-accent);"><rect x="1" y="3" width="15" height="13" rx="2" ry="2"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
-          <p class="text-sm font-medium" style="color: var(--color-foreground); font-family: var(--font-body);">Unmarked Vehicles</p>
-        </div>
-        <div class="flex flex-col items-center text-center gap-3">
-          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-accent);"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-          <p class="text-sm font-medium" style="color: var(--color-foreground); font-family: var(--font-body);">Screened & Trained Employees</p>
-        </div>
-        <div class="flex flex-col items-center text-center gap-3 col-span-2 md:col-span-1">
-          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-accent);"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-          <p class="text-sm font-medium" style="color: var(--color-foreground); font-family: var(--font-body);">Free Phone Estimates</p>
+        <div class="why-image reveal">
+          <div class="family-frame">
+            <img src="/images/unadjustednonraw_thumb_a1e1.jpg" alt="The A2Z Pest Control family" width="1706" height="2274" loading="lazy" />
+            <span class="family-caption">The family behind A2Z, serving Pittsburgh since 1993</span>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Services Preview -->
-  <section style="background: var(--color-background);">
-    <div class="mx-auto" style="max-width: var(--content-max-width); padding: var(--section-padding-y) var(--padding-x-mobile);">
-      <h2 class="mb-4">What We Handle</h2>
-      <p class="text-base mb-10 max-w-2xl" style="color: var(--color-muted-foreground); font-family: var(--font-body);">A2Z Pest Control treats the most common household and seasonal pests in the Pittsburgh area. Call for a free phone estimate. We'll confirm whether we're the right fit before you schedule anything.</p>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="bg-white p-6 border-t-2" style="border-color: var(--color-accent-bright); border-radius: var(--radius);">
-          <h3 class="mb-2">Ants</h3>
-          <p class="text-sm" style="color: var(--color-muted-foreground);">Carpenter ants, odorous house ants, and pavement ants.</p>
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-block reveal">
+        <h2>Something crawling where it shouldn't be?</h2>
+        <p>Give us a call. We'll give you a straight answer and a fair price over the phone.</p>
+        <div class="cta-actions">
+          <a href="tel:412-854-2224" class="btn btn-primary btn-lg">Call 412-854-2224</a>
+          <a href="/contact" class="btn btn-ghost">Email Us</a>
         </div>
-        <div class="bg-white p-6 border-t-2" style="border-color: var(--color-accent-bright); border-radius: var(--radius);">
-          <h3 class="mb-2">Rodents</h3>
-          <p class="text-sm" style="color: var(--color-muted-foreground);">Mice, rats, and other rodents invading your home.</p>
-        </div>
-        <div class="bg-white p-6 border-t-2" style="border-color: var(--color-accent-bright); border-radius: var(--radius);">
-          <h3 class="mb-2">Roaches & Boxelder Bugs</h3>
-          <p class="text-sm" style="color: var(--color-muted-foreground);">Cockroach infestations and seasonal boxelder bug invasions.</p>
-        </div>
-        <div class="bg-white p-6 border-t-2" style="border-color: var(--color-accent-bright); border-radius: var(--radius);">
-          <h3 class="mb-2">Centipedes & Millipedes</h3>
-          <p class="text-sm" style="color: var(--color-muted-foreground);">House centipedes and millipedes found in basements and damp areas.</p>
-        </div>
-        <div class="bg-white p-6 border-t-2" style="border-color: var(--color-accent-bright); border-radius: var(--radius);">
-          <h3 class="mb-2">Stinging Insects</h3>
-          <p class="text-sm" style="color: var(--color-muted-foreground);">Wasps, yellow jackets, hornets, and bumble bees. Exterior treatment only.</p>
-        </div>
-        <div class="bg-white p-6 border-t-2" style="border-color: var(--color-accent-bright); border-radius: var(--radius);">
-          <h3 class="mb-2">Moths</h3>
-          <p class="text-sm" style="color: var(--color-muted-foreground);">Indian meal moths infesting stored food products.</p>
-        </div>
-        <div class="bg-white p-6 border-t-2" style="border-color: var(--color-accent-bright); border-radius: var(--radius);">
-          <h3 class="mb-2">Fleas</h3>
-          <p class="text-sm" style="color: var(--color-muted-foreground);">Flea infestations in homes with pets or wildlife activity.</p>
-        </div>
-        <div class="bg-white p-6 border-t-2" style="border-color: var(--color-accent-bright); border-radius: var(--radius);">
-          <h3 class="mb-2">Silverfish & Earwigs</h3>
-          <p class="text-sm" style="color: var(--color-muted-foreground);">Silverfish in humid areas and earwigs around foundations.</p>
-        </div>
-        <div class="bg-white p-6 border-t-2" style="border-color: var(--color-accent-bright); border-radius: var(--radius);">
-          <h3 class="mb-2">Carpenter Bees</h3>
-          <p class="text-sm" style="color: var(--color-muted-foreground);">Carpenter bees boring into wood trim, decks, and fascia boards.</p>
-        </div>
+        <p class="cta-hours">Phones answered Monday through Friday, 8am to 3pm</p>
       </div>
-
-      <div class="mt-8 p-5 border-l-[3px]" style="border-color: var(--color-accent-bright); background: #f0f8f4; border-radius: 0 var(--radius) var(--radius) 0;">
-        <p class="text-sm italic" style="color: var(--color-muted-foreground); font-family: var(--font-body);">Note: We are not currently taking on new termite work this year.</p>
-      </div>
-
-      <div class="mt-8">
-        <a href="/services" class="text-sm font-medium underline underline-offset-4" style="color: var(--color-accent); font-family: var(--font-body);">View full service details</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Service Area + CTA -->
-  <section style="background: var(--color-muted);">
-    <div class="mx-auto text-center" style="max-width: var(--content-max-width); padding: var(--section-padding-y) var(--padding-x-mobile);">
-      <div class="w-12 h-[3px] mx-auto mb-8" style="background: var(--color-accent-bright);"></div>
-      <h2 class="mb-4">Serving Pittsburgh and Surrounding Counties</h2>
-      <p class="text-base mb-10 max-w-xl mx-auto" style="color: var(--color-muted-foreground); font-family: var(--font-body);">We cover Allegheny, Butler, and Washington Counties. If you're not sure whether we service your area, call us. We're happy to check.</p>
-      <a href="tel:4128542224" class="inline-block text-4xl md:text-5xl font-bold tracking-tight mb-3" style="color: var(--color-accent); font-family: var(--font-display);">412-854-2224</a>
-      <p class="text-sm" style="color: var(--color-muted-foreground); font-family: var(--font-body);">Phones answered Monday-Friday 8am-3pm</p>
-    </div>
-  </section>
-
-  <!-- Google Reviews -->
-  <section style="background: var(--color-background);">
-    <div class="mx-auto text-center" style="max-width: var(--content-max-width); padding: 48px var(--padding-x-mobile);">
-      <a
-        href="https://www.google.com/search?q=a2z+pest+control&oq=a2z+pest+con&gs_lcrp=EgZjaHJvbWUqDAgAEAAYQxiABBiKBTIMCAAQABhDGIAEGIoFMgYIARBFGDkyDQgCEC4YrwEYxwEYgAQyBwgDEAAYgAQyCAgEEAAYFhgeMggIBRAAGBYYHjIGCAYQRRg8MgYIBxBFGD3SAQgyOTA1ajBqN6gCALACAA&sourceid=chrome&ie=UTF-8#lrd=0x8834fa25b9efdde3:0x77d635f21777909,1,,,,"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium border-2"
-        style="border-color: var(--color-accent-bright); color: var(--color-accent); border-radius: var(--radius-full); font-family: var(--font-body);"
-      >
-        See what Pittsburgh homeowners say about A2Z Pest Control
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-      </a>
     </div>
   </section>
 
 </Layout>
+
+<style>
+  /* ============ HERO ============ */
+  .hero {
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: grid;
+    place-items: center;
+    position: relative;
+    overflow: hidden;
+    padding-top: 80px;
+    background:
+      radial-gradient(ellipse at 70% 50%, oklch(0.15 0.04 155 / 0.5), transparent 60%),
+      var(--black);
+  }
+
+  .hero-inner {
+    width: min(var(--max-width), 100% - var(--space-md) * 2);
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+    align-items: center;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: var(--space-sm);
+  }
+
+  .hero-headline {
+    font-size: clamp(4rem, 10vw, 9rem);
+    line-height: 0.88;
+    margin-bottom: var(--space-md);
+  }
+
+  .hero-line {
+    display: block;
+  }
+
+  .hero-line-2 {
+    color: var(--green);
+  }
+
+  .hero-dot {
+    color: var(--green-bright);
+  }
+
+  .hero-sub {
+    font-size: 1.1rem;
+    color: var(--text-dim);
+    max-width: 440px;
+    margin-bottom: var(--space-md);
+    line-height: 1.7;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: var(--space-sm);
+    flex-wrap: wrap;
+    margin-bottom: var(--space-sm);
+  }
+
+  .hero-note {
+    font-size: 0.8rem;
+    color: var(--text-faint);
+    letter-spacing: 0.03em;
+  }
+
+  /* Specimen frame in hero */
+  .hero-specimen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .specimen-frame {
+    position: relative;
+    background: var(--specimen-bg);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    box-shadow:
+      0 0 0 1px oklch(0.3 0.02 145 / 0.3),
+      0 25px 60px oklch(0 0 0 / 0.5),
+      inset 0 1px 0 oklch(1 0 0 / 0.05);
+    max-width: 480px;
+    width: 100%;
+    transform: rotate(2deg);
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+
+    &:hover {
+      transform: rotate(0deg) scale(1.02);
+    }
+  }
+
+  .specimen-img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+  }
+
+  .specimen-label {
+    display: block;
+    margin-top: var(--space-sm);
+    font-size: 0.75rem;
+    font-style: italic;
+    color: oklch(0.5 0.02 145);
+    letter-spacing: 0.02em;
+  }
+
+  .specimen-common {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    color: oklch(0.2 0.02 145);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+
+  .hero-scroll-cue {
+    position: absolute;
+    bottom: var(--space-md);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .scroll-line {
+    display: block;
+    width: 1px;
+    height: 60px;
+    background: linear-gradient(to bottom, var(--green), transparent);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .scroll-line {
+      animation: scroll-pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes scroll-pulse {
+      0%, 100% { opacity: 0.3; transform: scaleY(0.6); }
+      50% { opacity: 1; transform: scaleY(1); }
+    }
+  }
+
+  @media (max-width: 900px) {
+    .hero-inner {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+
+    .hero-sub {
+      margin-inline: auto;
+    }
+
+    .hero-actions {
+      justify-content: center;
+    }
+
+    .hero-specimen {
+      order: -1;
+    }
+
+    .specimen-frame {
+      max-width: 320px;
+      transform: rotate(0deg);
+    }
+
+    .hero-headline {
+      font-size: clamp(3.5rem, 12vw, 6rem);
+    }
+  }
+
+  /* ============ TRUST BAR ============ */
+  .trust-bar {
+    background: var(--dark);
+    border-block: 1px solid var(--border);
+    padding-block: var(--space-md);
+  }
+
+  .trust-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+  }
+
+  .trust-item {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+  }
+
+  .trust-number, .trust-icon {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    color: var(--green);
+    line-height: 1;
+  }
+
+  .trust-label {
+    font-size: 0.85rem;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+  }
+
+  @media (max-width: 600px) {
+    .trust-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      text-align: center;
+    }
+
+    .trust-item {
+      flex-direction: column;
+      align-items: center;
+      gap: 0.2rem;
+    }
+  }
+
+  /* ============ SERVICES GRID ============ */
+  .services-section {
+    background: var(--black);
+  }
+
+  .section-header {
+    margin-bottom: var(--space-lg);
+  }
+
+  .section-title {
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    margin-bottom: var(--space-sm);
+  }
+
+  .section-sub {
+    color: var(--text-dim);
+    font-size: 1rem;
+    max-width: 480px;
+  }
+
+  .pest-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+  }
+
+  .pest-card-featured {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  .pest-card {
+    position: relative;
+    overflow: hidden;
+    background: var(--dark);
+    border-radius: var(--radius);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+
+    &:hover {
+      transform: scale(1.01);
+      z-index: 2;
+
+      .pest-card-image img {
+        transform: scale(1.08);
+        filter: saturate(1) brightness(1);
+      }
+
+      .pest-card-info {
+        background: oklch(0.12 0.03 155 / 0.95);
+      }
+    }
+  }
+
+  .pest-card-image {
+    flex: 1;
+    overflow: hidden;
+    background: var(--specimen-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-md);
+
+    img {
+      width: 80%;
+      height: auto;
+      object-fit: contain;
+      max-height: 200px;
+      transition: transform 0.6s ease, filter 0.6s ease;
+      filter: saturate(0.5) brightness(0.95);
+    }
+  }
+
+  .pest-card-featured .pest-card-image img {
+    max-height: 400px;
+    width: 70%;
+  }
+
+  .pest-card-info {
+    padding: var(--space-sm) var(--space-md);
+    background: var(--dark);
+    transition: background 0.3s;
+
+    h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.15rem;
+    }
+
+    p {
+      font-size: 0.8rem;
+      color: var(--text-dim);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .pest-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .pest-card-featured {
+      grid-column: span 2;
+      grid-row: span 1;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .pest-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .pest-card-featured {
+      grid-column: span 1;
+    }
+  }
+
+  /* ============ WHY SECTION ============ */
+  .why-section {
+    background:
+      linear-gradient(135deg, var(--black-pure) 0%, var(--dark) 100%);
+  }
+
+  .why-layout {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: var(--space-xl);
+    align-items: start;
+  }
+
+  .why-points {
+    margin-top: var(--space-lg);
+    display: grid;
+    gap: var(--space-md);
+  }
+
+  .why-point {
+    padding-left: var(--space-md);
+    border-left: 2px solid var(--green-dim);
+    transition: border-color 0.3s;
+
+    &:hover {
+      border-color: var(--green);
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.3rem;
+    }
+
+    p {
+      color: var(--text-dim);
+      font-size: 0.95rem;
+    }
+  }
+
+  .family-frame {
+    position: sticky;
+    top: 100px;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: 0 20px 60px oklch(0 0 0 / 0.5);
+    border: 1px solid var(--border);
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      aspect-ratio: 3/4;
+    }
+  }
+
+  .family-caption {
+    display: block;
+    padding: var(--space-sm) var(--space-md);
+    background: var(--dark);
+    font-size: 0.8rem;
+    color: var(--text-dim);
+  }
+
+  @media (max-width: 768px) {
+    .why-layout {
+      grid-template-columns: 1fr;
+    }
+
+    .why-image {
+      order: -1;
+    }
+
+    .family-frame {
+      position: static;
+      max-width: 400px;
+      margin-inline: auto;
+    }
+  }
+
+  /* ============ CTA ============ */
+  .cta-section {
+    padding-block: var(--space-2xl);
+    background:
+      radial-gradient(ellipse at 30% 50%, oklch(0.15 0.04 155 / 0.4), transparent 50%),
+      var(--black);
+  }
+
+  .cta-block {
+    text-align: center;
+    max-width: 640px;
+    margin-inline: auto;
+
+    h2 {
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      margin-bottom: var(--space-sm);
+    }
+
+    p {
+      color: var(--text-dim);
+      font-size: 1.1rem;
+      margin-bottom: var(--space-md);
+    }
+  }
+
+  .cta-actions {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-sm);
+    flex-wrap: wrap;
+    margin-bottom: var(--space-sm);
+  }
+
+  .cta-hours {
+    font-size: 0.8rem !important;
+    color: var(--text-faint) !important;
+  }
+
+  /* ============ BUTTONS ============ */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.75rem 1.75rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    border-radius: var(--radius);
+    transition: all 0.25s ease;
+    white-space: nowrap;
+  }
+
+  .btn-primary {
+    background: var(--green);
+    color: var(--black);
+
+    &:hover {
+      background: var(--green-bright);
+      box-shadow: 0 0 30px oklch(0.72 0.19 155 / 0.3);
+    }
+  }
+
+  .btn-ghost {
+    border: 1px solid var(--border);
+    color: var(--text);
+
+    &:hover {
+      border-color: var(--green-dim);
+      color: var(--green);
+      background: var(--green-glass);
+    }
+  }
+
+  .btn-lg {
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+  }
+</style>
