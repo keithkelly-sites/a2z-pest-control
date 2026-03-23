@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import { ClientRouter } from 'astro:transitions';
+import { Font } from 'astro:assets';
 
 interface Props {
   title: string;
@@ -30,6 +31,8 @@ const ogImageURL = new URL(ogImage, Astro.site);
   <meta property="og:site_name" content="A2Z Pest Control LLC" />
   <link rel="icon" type="image/png" href="/images/favicon.png" />
   <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <Font cssVariable="--font-bebas" preload />
+  <Font cssVariable="--font-inter" preload />
   <ClientRouter />
 </head>
 <body>
@@ -46,7 +49,7 @@ const ogImageURL = new URL(ogImage, Astro.site);
           <span class="nav-toggle-bar" aria-hidden="true"></span>
           <span class="nav-toggle-bar" aria-hidden="true"></span>
         </button>
-        <ul id="nav-menu" class="nav-list">
+        <ul id="nav-menu" class="nav-list nav-list--desktop">
           <li><a href="/" class:list={[{ active: currentPath === '/' }]} aria-current={currentPath === '/' ? 'page' : undefined}>Home</a></li>
           <li><a href="/services" class:list={[{ active: currentPath === '/services' || currentPath === '/services/' }]} aria-current={currentPath === '/services' || currentPath === '/services/' ? 'page' : undefined}>Services</a></li>
           <li><a href="/about" class:list={[{ active: currentPath === '/about' || currentPath === '/about/' }]} aria-current={currentPath === '/about' || currentPath === '/about/' ? 'page' : undefined}>About</a></li>
@@ -56,6 +59,20 @@ const ogImageURL = new URL(ogImage, Astro.site);
       </nav>
     </div>
   </header>
+
+  <!-- Mobile menu overlay — outside header to avoid backdrop-filter containing block -->
+  <div id="mobile-menu" class="mobile-overlay" aria-hidden="true">
+    <button class="mobile-overlay-close" aria-label="Close menu">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <ul class="mobile-overlay-list">
+      <li><a href="/" class:list={[{ active: currentPath === '/' }]} aria-current={currentPath === '/' ? 'page' : undefined}>Home</a></li>
+      <li><a href="/services" class:list={[{ active: currentPath === '/services' || currentPath === '/services/' }]} aria-current={currentPath === '/services' || currentPath === '/services/' ? 'page' : undefined}>Services</a></li>
+      <li><a href="/about" class:list={[{ active: currentPath === '/about' || currentPath === '/about/' }]} aria-current={currentPath === '/about' || currentPath === '/about/' ? 'page' : undefined}>About</a></li>
+      <li><a href="/contact" class:list={[{ active: currentPath === '/contact' || currentPath === '/contact/' }]} aria-current={currentPath === '/contact' || currentPath === '/contact/' ? 'page' : undefined}>Contact</a></li>
+    </ul>
+    <a href="tel:412-854-2224" class="mobile-overlay-cta">412-854-2224</a>
+  </div>
 
   <main id="main-content">
     <slot />
@@ -100,20 +117,40 @@ const ogImageURL = new URL(ogImage, Astro.site);
   </footer>
 
   <script>
-    function initPage() {
-      // Mobile nav toggle
+    function initMobileNav() {
       const toggle = document.querySelector('.nav-toggle');
-      const menu = document.querySelector('#nav-menu');
-      if (toggle && menu) {
-        toggle.addEventListener('click', () => {
-          const expanded = toggle.getAttribute('aria-expanded') === 'true';
-          toggle.setAttribute('aria-expanded', String(!expanded));
-          menu.classList.toggle('open');
-        });
+      const overlay = document.querySelector('#mobile-menu');
+      if (!toggle || !overlay) return;
+
+      function closeMenu() {
+        toggle.setAttribute('aria-expanded', 'false');
+        overlay.classList.remove('open');
+        overlay.setAttribute('aria-hidden', 'true');
       }
 
-      // Intersection observer for reveal animations
-      const reveals = document.querySelectorAll('.reveal');
+      // Replace old listener by cloning the node
+      const freshToggle = toggle.cloneNode(true) as Element;
+      toggle.replaceWith(freshToggle);
+
+      freshToggle.addEventListener('click', () => {
+        const expanded = freshToggle.getAttribute('aria-expanded') === 'true';
+        freshToggle.setAttribute('aria-expanded', String(!expanded));
+        overlay.classList.toggle('open');
+        overlay.setAttribute('aria-hidden', String(expanded));
+      });
+
+      // Close button
+      const closeBtn = overlay.querySelector('.mobile-overlay-close');
+      if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+
+      // Close menu when a nav link is clicked
+      overlay.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', closeMenu);
+      });
+    }
+
+    function initReveals() {
+      const reveals = document.querySelectorAll('.reveal:not(.visible)');
       if (reveals.length === 0) return;
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -124,6 +161,11 @@ const ogImageURL = new URL(ogImage, Astro.site);
         });
       }, { threshold: 0.1, rootMargin: '0px 0px -20px 0px' });
       reveals.forEach(el => observer.observe(el));
+    }
+
+    function initPage() {
+      initMobileNav();
+      initReveals();
     }
 
     // Run when DOM is ready and on Astro client-side navigations
@@ -255,19 +297,36 @@ const ogImageURL = new URL(ogImage, Astro.site);
   @media (max-width: 768px) {
     .nav-toggle {
       display: flex;
+      position: relative;
+      z-index: 300;
     }
 
-    .nav-list {
+    .nav-list--desktop {
+      display: none;
+    }
+
+    .header-cta {
+      display: none;
+    }
+  }
+
+  /* Mobile overlay — lives outside header to avoid backdrop-filter containing block */
+  .mobile-overlay {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    .mobile-overlay {
+      display: flex;
       position: fixed;
-      top: 60px;
-      left: 0;
-      right: 0;
-      bottom: 0;
+      inset: 0;
+      z-index: 200;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: var(--space-sm);
-      background: var(--black-pure);
+      gap: var(--space-lg);
+      background: oklch(0.05 0.01 145 / 0.97);
+      backdrop-filter: blur(20px);
       opacity: 0;
       pointer-events: none;
       transition: opacity 0.3s;
@@ -276,14 +335,58 @@ const ogImageURL = new URL(ogImage, Astro.site);
         opacity: 1;
         pointer-events: auto;
       }
+    }
 
-      a {
-        font-size: 1.5rem;
+    .mobile-overlay-close {
+      position: absolute;
+      top: var(--space-sm);
+      right: var(--space-md);
+      font-size: 2rem;
+      line-height: 1;
+      color: var(--text-dim);
+      padding: 0.25rem 0.5rem;
+      transition: color 0.2s;
+
+      &:hover {
+        color: var(--white);
       }
     }
 
-    .header-cta {
-      display: none;
+    .mobile-overlay-list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-md);
+      list-style: none;
+
+      a {
+        font-size: 1.5rem;
+        font-weight: 500;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: var(--white);
+        transition: color 0.2s;
+
+        &:hover, &.active {
+          color: var(--green);
+        }
+      }
+    }
+
+    .mobile-overlay-cta {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      letter-spacing: 0.05em;
+      color: var(--green);
+      padding: 0.6rem 1.5rem;
+      border: 1px solid var(--green-dim);
+      border-radius: var(--radius);
+      transition: background 0.2s, color 0.2s;
+
+      &:hover {
+        background: var(--green);
+        color: var(--black);
+      }
     }
   }
 
